@@ -118,7 +118,7 @@ export default function Projects() {
                                     description={
                                         "Guardian allows server owners to set strict limits on administration actions (bans, kicks, deletions, etc). Once these limits are met, their Discord permissions are automatically revoked via removing all of their roles."
                                     }
-                                    title={"Quick.db"}
+                                    title={"Guardian"}
                                 />
                             </SimpleGrid>
                         </div>
