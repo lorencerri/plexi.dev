@@ -71,7 +71,7 @@ const useStyles = createStyles((theme) => ({
     },
 
     controls: {
-        marginTop: theme.spacing.lg,
+        marginTop: 20,
         display: "flex",
         justifyContent: "center",
 
