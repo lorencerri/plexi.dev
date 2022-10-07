@@ -1,37 +1,14 @@
-import { AppShell, Title, Header, Group, Button } from "@mantine/core";
-import styled from "@emotion/styled";
+import { Divider } from "@mantine/core";
+import Header from "app/components/Header";
+import Hero from "app/components/Hero";
+import Team from "app/components/Team";
 
 export default function Index() {
     return (
-        <AppShell
-            padding="md"
-            header={
-                <StyledHeader height={60} p="xs">
-                    <Group sx={{ height: "100%" }} pl={15} position="apart">
-                        <Title order={2}>
-                            <StyledTitle>Plexi</StyledTitle> Development
-                        </Title>
-                        <Button<"a">
-                            component="a"
-                            href="https://discord.gg/plexidev"
-                            target="_blank"
-                            variant="outline"
-                        >
-                            Discord
-                        </Button>
-                    </Group>
-                </StyledHeader>
-            }
-        >
-            &nbsp;
-        </AppShell>
+        <div>
+            <Header />
+            <Hero />
+            <Team />
+        </div>
     );
 }
-
-const StyledTitle = styled.span`
-    color: #3b5bdb;
-`;
-
-const StyledHeader = styled(Header)`
-    border: none;
-`;
