@@ -1,4 +1,12 @@
-import { createStyles, Title, Text, Button, Container } from "@mantine/core";
+import { useState, useEffect } from "react";
+import {
+    createStyles,
+    Title,
+    Text,
+    Button,
+    Container,
+    Transition,
+} from "@mantine/core";
 import { Dots } from "./Dots";
 
 const useStyles = createStyles((theme) => ({
@@ -90,7 +98,12 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export default function Hero() {
+    const [mounted, setMounted] = useState(false);
     const { classes } = useStyles();
+
+    useEffect(() => {
+        setMounted(true);
+    }, [mounted]);
 
     return (
         <Container className={classes.wrapper} size={1400}>
@@ -99,48 +112,59 @@ export default function Hero() {
             <Dots className={classes.dots} style={{ left: 0, top: 140 }} />
             <Dots className={classes.dots} style={{ right: 0, top: 60 }} />
 
-            <div className={classes.inner}>
-                <Title className={classes.title}>
-                    Welcome To{" "}
-                    <Text
-                        component="span"
-                        className={classes.highlight}
-                        inherit
-                    >
-                        Plexi Development
-                    </Text>
-                </Title>
+            <Transition
+                transition="fade"
+                mounted={mounted}
+                duration={1000}
+                timingFunction="ease"
+            >
+                {(styles) => {
+                    return (
+                        <div className={classes.inner} style={styles}>
+                            <Title className={classes.title}>
+                                Welcome To{" "}
+                                <Text
+                                    component="span"
+                                    className={classes.highlight}
+                                    inherit
+                                >
+                                    Plexi Development
+                                </Text>
+                            </Title>
 
-                <Container p={0} size={600}>
-                    <Text
-                        size="lg"
-                        color="dimmed"
-                        className={classes.description}
-                    >
-                        We're a community of developers and creators centered
-                        around creating user-friendly applications and developer
-                        resources.
-                    </Text>
-                </Container>
+                            <Container p={0} size={600}>
+                                <Text
+                                    size="lg"
+                                    color="dimmed"
+                                    className={classes.description}
+                                >
+                                    We're a community of developers and creators
+                                    centered around creating user-friendly
+                                    applications and developer resources.
+                                </Text>
+                            </Container>
 
-                <div className={classes.controls}>
-                    <Button
-                        className={classes.control}
-                        size="lg"
-                        variant="default"
-                        color="gray"
-                    >
-                        Join our community
-                    </Button>
-                    <Button
-                        className={classes.control}
-                        style={{ backgroundColor: "#3b5bdb" }}
-                        size="lg"
-                    >
-                        Projects
-                    </Button>
-                </div>
-            </div>
+                            <div className={classes.controls}>
+                                <Button
+                                    className={classes.control}
+                                    size="lg"
+                                    variant="default"
+                                    color="gray"
+                                >
+                                    Join our community
+                                </Button>
+                                <Button
+                                    className={classes.control}
+                                    style={{ backgroundColor: "#3b5bdb" }}
+                                    size="lg"
+                                >
+                                    Projects
+                                </Button>
+                            </div>
+                        </div>
+                    );
+                }}
+            </Transition>
         </Container>
     );
 }

@@ -1,4 +1,11 @@
-import { Title, Container, SimpleGrid, createStyles } from "@mantine/core";
+import { useState, useEffect } from "react";
+import {
+    Title,
+    Container,
+    SimpleGrid,
+    createStyles,
+    GroupedTransition,
+} from "@mantine/core";
 import styled from "@emotion/styled";
 
 import TeamMember from "./TeamMember";
@@ -149,7 +156,12 @@ const team = [
 ];
 
 export default function Team() {
+    const [mounted, setMounted] = useState(false);
     const { classes } = useStyles();
+
+    useEffect(() => {
+        setMounted(true);
+    }, [mounted]);
 
     return (
         <Container className={classes.wrapper} size={1050}>
@@ -158,22 +170,49 @@ export default function Team() {
             <Dots className={classes.dots} style={{ left: 100, top: 940 }} />
             <Dots className={classes.dots} style={{ right: 100, top: 860 }} />
 
-            <div className={classes.inner}>
-                <Title order={3} className={classes.subtitle}>
-                    Meet The<StyledTitle> Team</StyledTitle>
-                </Title>
-
-                <SimpleGrid
-                    cols={3}
-                    spacing={50}
-                    breakpoints={[{ maxWidth: 550, cols: 1, spacing: 40 }]}
-                    className={classes.members}
-                >
-                    {team.map((member) => {
-                        return <TeamMember key={member.name} {...member} />;
-                    })}
-                </SimpleGrid>
-            </div>
+            <GroupedTransition
+                mounted={mounted}
+                transitions={{
+                    subtitle: { duration: 2500, transition: "fade" },
+                    team: {
+                        duration: 2500,
+                        transition: "slide-up",
+                        timingFunction: "ease",
+                    },
+                }}
+            >
+                {(styles) => {
+                    return (
+                        <div className={classes.inner}>
+                            <Title
+                                order={3}
+                                className={classes.subtitle}
+                                style={styles.subtitle}
+                            >
+                                Meet The<StyledTitle> Team</StyledTitle>
+                            </Title>
+                            <SimpleGrid
+                                cols={3}
+                                spacing={50}
+                                breakpoints={[
+                                    { maxWidth: 550, cols: 1, spacing: 40 },
+                                ]}
+                                className={classes.members}
+                                style={styles.team}
+                            >
+                                {team.map((member) => {
+                                    return (
+                                        <TeamMember
+                                            key={member.name}
+                                            {...member}
+                                        />
+                                    );
+                                })}
+                            </SimpleGrid>
+                        </div>
+                    );
+                }}
+            </GroupedTransition>
         </Container>
     );
 }
