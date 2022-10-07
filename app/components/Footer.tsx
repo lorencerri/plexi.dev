@@ -4,18 +4,9 @@ import { createStyles, Anchor, Group, Title, Transition } from "@mantine/core";
 import { useEffect, useState } from "react";
 
 const useStyles = createStyles((theme) => ({
-    footer: {
-        marginTop: 120,
-        borderTop: `1px solid ${
-            theme.colorScheme === "dark"
-                ? theme.colors.dark[5]
-                : theme.colors.gray[2]
-        }`,
-    },
+    footer: {},
 
     inner: {
-        padding: `${theme.spacing.md}px ${theme.spacing.md}px`,
-
         [theme.fn.smallerThan("sm")]: {
             flexDirection: "column",
         },
@@ -66,13 +57,21 @@ export default function Footer() {
         >
             {(styles) => {
                 return (
-                    <div className={classes.footer} style={styles}>
+                    <div
+                        className={classes.footer}
+                        style={{
+                            ...styles,
+                            marginTop: 120,
+                            borderTop: "1px solid #2C2E33",
+                        }}
+                    >
                         <div
                             className={classes.inner}
                             style={{
                                 display: "flex",
                                 justifyContent: "space-between",
                                 alignItems: "center",
+                                padding: "16px 16px",
                             }}
                         >
                             <Title order={2}>
