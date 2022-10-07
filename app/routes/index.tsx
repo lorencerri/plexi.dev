@@ -2,6 +2,7 @@ import Header from "app/components/Header";
 import Hero from "app/components/Hero";
 import Team from "app/components/Team";
 import Projects from "app/components/Projects";
+import Footer from "app/components/Footer";
 
 export default function Index() {
     return (
@@ -10,6 +11,7 @@ export default function Index() {
             <Hero />
             <Team />
             <Projects />
+            <Footer />
         </div>
     );
 }

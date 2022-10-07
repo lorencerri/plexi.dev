@@ -8,7 +8,6 @@ import {
     Transition,
 } from "@mantine/core";
 import { Dots } from "./Dots";
-import { IconBrandDiscord, IconExternalLink } from "@tabler/icons";
 
 const useStyles = createStyles((theme) => ({
     wrapper: {
