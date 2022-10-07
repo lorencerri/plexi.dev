@@ -151,7 +151,10 @@ export default function Hero({ scrollIntoView }: HeroProps) {
                                 </Text>
                             </Container>
 
-                            <div className={classes.controls}>
+                            <div
+                                className={classes.controls}
+                                style={{ marginTop: 20 }}
+                            >
                                 <Button
                                     component="a"
                                     href="https://discord.gg/plexidev"
