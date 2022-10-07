@@ -14,9 +14,6 @@ const useStyles = createStyles((theme) => ({
     },
 
     inner: {
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
         padding: `${theme.spacing.md}px ${theme.spacing.md}px`,
 
         [theme.fn.smallerThan("sm")]: {
@@ -70,7 +67,14 @@ export default function Footer() {
             {(styles) => {
                 return (
                     <div className={classes.footer} style={styles}>
-                        <div className={classes.inner}>
+                        <div
+                            className={classes.inner}
+                            style={{
+                                display: "flex",
+                                justifyContent: "space-between",
+                                alignItems: "center",
+                            }}
+                        >
                             <Title order={2}>
                                 <StyledTitle>plexi</StyledTitle>dev
                             </Title>
