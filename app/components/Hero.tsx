@@ -8,6 +8,7 @@ import {
     Transition,
 } from "@mantine/core";
 import { Dots } from "./Dots";
+import { IconBrandDiscord, IconExternalLink } from "@tabler/icons";
 
 const useStyles = createStyles((theme) => ({
     wrapper: {
@@ -146,13 +147,19 @@ export default function Hero() {
 
                             <div className={classes.controls}>
                                 <Button
-                                    className={classes.control}
+                                    component="a"
+                                    href="https://discord.gg/plexidev"
+                                    target="_blank"
+                                    rel="noreferrer"
                                     size="lg"
                                     variant="default"
                                     color="gray"
+                                    className={classes.control}
+                                    mr={20}
                                 >
                                     Join our community
                                 </Button>
+
                                 <Button
                                     className={classes.control}
                                     style={{ backgroundColor: "#3b5bdb" }}
