@@ -4,18 +4,49 @@ import { createStyles, Anchor, Group, Title, Transition } from "@mantine/core";
 import { useEffect, useState } from "react";
 
 const useStyles = createStyles((theme) => ({
-    footer: {},
-
     inner: {
         [theme.fn.smallerThan("sm")]: {
             flexDirection: "column",
         },
     },
 
-    links: {
+    link: {
+        display: "block",
+        lineHeight: 1,
+        padding: "8px 12px",
+        borderRadius: theme.radius.sm,
+        textDecoration: "none",
+        color:
+            theme.colorScheme === "dark"
+                ? theme.colors.dark[0]
+                : theme.colors.gray[7],
+        fontSize: theme.fontSizes.sm,
+        fontWeight: 500,
+
+        "&:hover": {
+            backgroundColor:
+                theme.colorScheme === "dark"
+                    ? theme.colors.dark[6]
+                    : theme.colors.gray[0],
+            textDecoration: "none",
+        },
+
         [theme.fn.smallerThan("sm")]: {
-            marginTop: theme.spacing.lg,
-            marginBottom: theme.spacing.sm,
+            borderRadius: 0,
+            padding: theme.spacing.md,
+        },
+    },
+
+    linkActive: {
+        "&, &:hover": {
+            backgroundColor: theme.fn.variant({
+                variant: "light",
+                color: theme.primaryColor,
+            }).background,
+            color: theme.fn.variant({
+                variant: "light",
+                color: theme.primaryColor,
+            }).color,
         },
     },
 }));
@@ -42,6 +73,7 @@ export default function Footer() {
             href={link.link}
             sx={{ lineHeight: 1 }}
             onClick={(event) => event.preventDefault()}
+            className={classes.link}
             size="sm"
         >
             {link.label}
@@ -58,7 +90,6 @@ export default function Footer() {
             {(styles) => {
                 return (
                     <div
-                        className={classes.footer}
                         style={{
                             ...styles,
                             marginTop: 120,
@@ -78,7 +109,7 @@ export default function Footer() {
                                 <StyledTitle>plexi</StyledTitle>dev
                             </Title>
 
-                            <Group className={classes.links}>{items}</Group>
+                            <Group>{items}</Group>
                         </div>
                     </div>
                 );

@@ -45,7 +45,7 @@ export default function Project({
                 size="xl"
                 radius="md"
                 variant="gradient"
-                gradient={{ deg: 0, from: "#C1C2C5", to: "#3B5BDB" }}
+                gradient={{ deg: 0, to: "#C1C2C5", from: "#3B5BDB" }}
             >
                 {icon}
             </ThemeIcon>

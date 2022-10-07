@@ -37,7 +37,7 @@ const useStyles = createStyles((theme) => ({
                 ? theme.colors.dark[5]
                 : theme.colors.gray[1],
 
-        "@media (max-width: 755px)": {
+        "@media (max-width: 1750px)": {
             display: "none",
         },
     },
