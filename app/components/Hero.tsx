@@ -77,6 +77,7 @@ const useStyles = createStyles((theme) => ({
 
         "@media (max-width: 520px)": {
             flexDirection: "column",
+            width: "100%",
         },
     },
 
@@ -88,6 +89,8 @@ const useStyles = createStyles((theme) => ({
         "@media (max-width: 520px)": {
             height: 42,
             fontSize: theme.fontSizes.md,
+            width: "100%",
+            marginBottom: 10,
 
             "&:not(:first-of-type)": {
                 marginTop: theme.spacing.md,
