@@ -100,7 +100,11 @@ const useStyles = createStyles((theme) => ({
     },
 }));
 
-export default function Hero() {
+interface HeroProps {
+    scrollIntoView: any;
+}
+
+export default function Hero({ scrollIntoView }: HeroProps) {
     const [mounted, setMounted] = useState(false);
     const { classes } = useStyles();
 
@@ -165,6 +169,7 @@ export default function Hero() {
                                 <Button
                                     className={classes.control}
                                     style={{ backgroundColor: "#3b5bdb" }}
+                                    onClick={scrollIntoView}
                                     size="lg"
                                 >
                                     Projects

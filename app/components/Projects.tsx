@@ -59,7 +59,11 @@ const useStyles = createStyles((theme) => ({
     },
 }));
 
-export default function Projects() {
+interface ProjectsProps {
+    targetRef: any;
+}
+
+export default function Projects({ targetRef }: ProjectsProps) {
     const [mounted, setMounted] = useState(false);
     const { classes } = useStyles();
 
@@ -92,6 +96,7 @@ export default function Projects() {
                                 order={3}
                                 className={classes.subtitle}
                                 style={styles.subtitle}
+                                ref={targetRef}
                             >
                                 Our<StyledTitle> Projects</StyledTitle>
                             </Title>
