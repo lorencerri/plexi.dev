@@ -153,10 +153,10 @@ export default function Team() {
 
     return (
         <Container className={classes.wrapper} size={1050}>
-            <Dots className={classes.dots} style={{ left: 0, top: 0 }} />
-            <Dots className={classes.dots} style={{ left: 60, top: 0 }} />
-            <Dots className={classes.dots} style={{ left: 0, top: 140 }} />
-            <Dots className={classes.dots} style={{ right: 0, top: 60 }} />
+            <Dots className={classes.dots} style={{ left: 100, top: 800 }} />
+            <Dots className={classes.dots} style={{ left: 160, top: 800 }} />
+            <Dots className={classes.dots} style={{ left: 100, top: 940 }} />
+            <Dots className={classes.dots} style={{ right: 100, top: 860 }} />
 
             <div className={classes.inner}>
                 <Title order={3} className={classes.subtitle}>
