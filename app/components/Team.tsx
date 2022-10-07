@@ -176,7 +176,7 @@ export default function Team() {
                     subtitle: { duration: 2500, transition: "fade" },
                     team: {
                         duration: 2500,
-                        transition: "slide-up",
+                        transition: "fade",
                         timingFunction: "ease",
                     },
                 }}
