@@ -1,18 +1,6 @@
 import styled from "@emotion/styled";
-import {
-    createStyles,
-    Anchor,
-    Group,
-    ActionIcon,
-    Title,
-    Transition,
-} from "@mantine/core";
-import {
-    IconBrandTwitter,
-    IconBrandYoutube,
-    IconBrandInstagram,
-    IconHeart,
-} from "@tabler/icons";
+import { createStyles, Anchor, Group, Title, Transition } from "@mantine/core";
+
 import { useEffect, useState } from "react";
 
 const useStyles = createStyles((theme) => ({

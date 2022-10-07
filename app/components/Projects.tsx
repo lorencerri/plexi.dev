@@ -8,8 +8,6 @@ import {
 } from "@mantine/core";
 import styled from "@emotion/styled";
 
-import lorencerriAvatar from "app/images/avatars/lorencerri.jpg";
-
 import Project from "./Project";
 import { Dots } from "./Dots";
 import { IconPackage, IconRobot } from "@tabler/icons";

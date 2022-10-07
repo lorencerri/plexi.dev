@@ -1,6 +1,5 @@
 import { createStyles, Paper, Text, ThemeIcon } from "@mantine/core";
-import { IconColorSwatch, IconPackage, TablerIcon } from "@tabler/icons";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 const useStyles = createStyles((theme) => ({
     card: {
