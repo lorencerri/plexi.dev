@@ -1,4 +1,14 @@
-import { createStyles, Anchor, Group, Title, Transition } from "@mantine/core";
+import {
+    createStyles,
+    Anchor,
+    Group,
+    Title,
+    Transition,
+    Button,
+    Modal,
+    Alert,
+} from "@mantine/core";
+import { IconAlertCircle } from "@tabler/icons";
 
 import { useEffect, useState } from "react";
 
@@ -46,6 +56,7 @@ const links = [
 
 export default function Footer() {
     const [mounted, setMounted] = useState(false);
+    const [opened, setOpened] = useState(false);
     const { classes } = useStyles();
 
     useEffect(() => {
@@ -67,41 +78,68 @@ export default function Footer() {
     ));
 
     return (
-        <Transition
-            transition="fade"
-            mounted={mounted}
-            duration={1000}
-            timingFunction="ease"
-        >
-            {(styles) => {
-                return (
-                    <div
-                        style={{
-                            ...styles,
-                            marginTop: 120,
-                            borderTop: "1px solid #2C2E33",
-                        }}
-                    >
+        <div>
+            <Modal
+                opened={opened}
+                onClose={() => setOpened(false)}
+                overlayOpacity={0.55}
+                overlayBlur={3}
+                title="Contact Us"
+            >
+                <Alert
+                    icon={<IconAlertCircle size={16} />}
+                    title="Oops!"
+                    color="yellow"
+                >
+                    This component is still under development. You can contact
+                    us by joining our Discord server.
+                </Alert>
+            </Modal>
+            <Transition
+                transition="fade"
+                mounted={mounted}
+                duration={1000}
+                timingFunction="ease"
+            >
+                {(styles) => {
+                    return (
                         <div
-                            className={classes.inner}
                             style={{
-                                display: "flex",
-                                justifyContent: "space-between",
-                                alignItems: "center",
-                                padding: "16px 16px",
+                                ...styles,
+                                marginTop: 120,
+                                borderTop: "1px solid #2C2E33",
                             }}
                         >
-                            <Title order={2}>
-                                <span style={{ color: "#3b5bdb" }}>plexi</span>
-                                dev
-                                <span style={{ color: "#3b5bdb" }}>-dev</span>
-                            </Title>
+                            <div
+                                className={classes.inner}
+                                style={{
+                                    display: "flex",
+                                    justifyContent: "space-between",
+                                    alignItems: "center",
+                                    padding: "16px 16px",
+                                }}
+                            >
+                                <Title order={2}>
+                                    <span style={{ color: "#3b5bdb" }}>
+                                        plexi
+                                    </span>
+                                    dev
+                                </Title>
 
-                            <Group>{items}</Group>
+                                <Group>
+                                    {items}
+                                    <Button
+                                        style={{ backgroundColor: "#3b5bdb" }}
+                                        onClick={() => setOpened(true)}
+                                    >
+                                        Contact Us
+                                    </Button>
+                                </Group>
+                            </div>
                         </div>
-                    </div>
-                );
-            }}
-        </Transition>
+                    );
+                }}
+            </Transition>
+        </div>
     );
 }
