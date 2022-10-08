@@ -119,7 +119,7 @@ export default function CustomHeader() {
         <Header height={60} mb={120} style={{ borderBottom: "none" }}>
             <Container className={classes.header}>
                 <Title order={2}>
-                    <StyledTitle>plexi</StyledTitle>dev
+                    <span style={{ color: "#3b5bdb" }}>plexi</span>dev
                 </Title>
                 <Group spacing={5} className={classes.links}>
                     {items}
@@ -150,7 +150,3 @@ export default function CustomHeader() {
         </Header>
     );
 }
-
-const StyledTitle = styled.span`
-    color: #3b5bdb;
-`;

@@ -106,7 +106,8 @@ export default function Footer() {
                             }}
                         >
                             <Title order={2}>
-                                <StyledTitle>plexi</StyledTitle>dev
+                                <span style={{ color: "#3b5bdb" }}>plexi</span>
+                                dev
                             </Title>
 
                             <Group>{items}</Group>
@@ -117,7 +118,3 @@ export default function Footer() {
         </Transition>
     );
 }
-
-const StyledTitle = styled.span`
-    color: #3b5bdb;
-`;
