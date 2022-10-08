@@ -94,7 +94,7 @@ export default function Project({
                                 mt={10}
                                 mr={10}
                                 gradient={{
-                                    deg: 0,
+                                    deg: 100,
                                     to: "#C1C2C5",
                                     from: "#3B5BDB",
                                 }}
