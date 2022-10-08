@@ -14,6 +14,8 @@ export const meta: MetaFunction = () => ({
     charset: "utf-8",
     title: "Plexi Development",
     viewport: "width=device-width,initial-scale=1",
+    description:
+        "We're a community of developers and creators centered around creating user-friendly applications and developer resources.",
 });
 
 createEmotionCache({ key: "mantine" });
