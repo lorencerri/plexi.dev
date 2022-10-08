@@ -36,12 +36,10 @@ const useStyles = createStyles((theme) => ({
         },
     },
 
-    link: {
-        "&:hover": {
-            textDecoration: "none",
-        },
-
-        color: "#C1C2C5",
+    linkButton: {
+        position: "absolute",
+        top: 0,
+        right: 0,
     },
 }));
 
@@ -89,10 +87,8 @@ export default function Project({
                             leftIcon={<IconExternalLink />}
                             style={{
                                 ...styles,
-                                position: "absolute",
-                                top: 0,
-                                right: 0,
                             }}
+                            className={classes.linkButton}
                             variant="gradient"
                             mt={10}
                             mr={10}
