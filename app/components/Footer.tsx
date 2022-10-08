@@ -14,6 +14,13 @@ import { useEffect, useState } from "react";
 
 const useStyles = createStyles((theme) => ({
     inner: {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: "16px 16px",
+        marginTop: 120,
+        borderTop: "1px solid #2C2E33",
+
         [theme.fn.smallerThan("sm")]: {
             flexDirection: "column",
         },
@@ -103,39 +110,21 @@ export default function Footer() {
             >
                 {(styles) => {
                     return (
-                        <div
-                            style={{
-                                ...styles,
-                                marginTop: 120,
-                                borderTop: "1px solid #2C2E33",
-                            }}
-                        >
-                            <div
-                                className={classes.inner}
-                                style={{
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    alignItems: "center",
-                                    padding: "16px 16px",
-                                }}
-                            >
-                                <Title order={2}>
-                                    <span style={{ color: "#3b5bdb" }}>
-                                        plexi
-                                    </span>
-                                    dev
-                                </Title>
+                        <div className={classes.inner} style={styles}>
+                            <Title order={2}>
+                                <span style={{ color: "#3b5bdb" }}>plexi</span>
+                                dev
+                            </Title>
 
-                                <Group>
-                                    {items}
-                                    <Button
-                                        style={{ backgroundColor: "#3b5bdb" }}
-                                        onClick={() => setOpened(true)}
-                                    >
-                                        Contact Us
-                                    </Button>
-                                </Group>
-                            </div>
+                            <Group>
+                                {items}
+                                <Button
+                                    style={{ backgroundColor: "#3b5bdb" }}
+                                    onClick={() => setOpened(true)}
+                                >
+                                    Contact Us
+                                </Button>
+                            </Group>
                         </div>
                     );
                 }}

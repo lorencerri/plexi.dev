@@ -71,6 +71,10 @@ const useStyles = createStyles((theme) => ({
     },
 
     controls: {
+        marginTop: 20,
+        display: "flex",
+        justifyContent: "center",
+
         "@media (max-width: 520px)": {
             flexDirection: "column",
             width: "100%",
@@ -147,14 +151,7 @@ export default function Hero({ scrollIntoView }: HeroProps) {
                                 </Text>
                             </Container>
 
-                            <div
-                                className={classes.controls}
-                                style={{
-                                    marginTop: 20,
-                                    display: "flex",
-                                    justifyContent: "center",
-                                }}
-                            >
+                            <div className={classes.controls}>
                                 <Button
                                     component="a"
                                     href="https://discord.gg/plexidev"
