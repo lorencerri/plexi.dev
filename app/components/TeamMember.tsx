@@ -92,7 +92,10 @@ export default function TeamMember({
                                 className={classes.icon}
                             />
                             <Anchor
-                                className={classes.linkAnchor}
+                                style={{
+                                    textUnderlineOffset: "2px",
+                                    textDecorationColor: "#3B5BDB",
+                                }}
                                 target="_blank"
                                 href={`https://github.com/${github.replace(
                                     /@/g,

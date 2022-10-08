@@ -145,7 +145,7 @@ export default function Projects({ targetRef }: ProjectsProps) {
                                 <Project
                                     icon={<IconClock />}
                                     description={
-                                        "We have a number of additional projects in works, stay tuned!"
+                                        "We have a number of additional projects in the works, stay tuned!"
                                     }
                                     title={"More Coming Soon"}
                                     link={"https://plexidev.org"}
