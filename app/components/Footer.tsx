@@ -94,6 +94,7 @@ export default function Footer() {
                             <Title order={2}>
                                 <span style={{ color: "#3b5bdb" }}>plexi</span>
                                 dev
+                                <span style={{ color: "#3b5bdb" }}>-dev</span>
                             </Title>
 
                             <Group>{items}</Group>
