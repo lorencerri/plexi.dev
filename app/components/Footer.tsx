@@ -91,8 +91,8 @@ export default function Footer() {
                     title="Oops!"
                     color="yellow"
                 >
-                    This component is still in development. You can contact us
-                    by joining our Discord server.
+                    This component is still under development. You can contact
+                    us by joining our Discord server.
                 </Alert>
             </Modal>
             <Transition
