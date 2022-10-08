@@ -7,6 +7,15 @@ import {
 } from "@tabler/icons";
 
 const useStyles = createStyles((theme) => ({
+    avatar: {
+        transition: "transform 150ms ease, box-shadow 100ms ease",
+
+        "&:hover": {
+            boxShadow: theme.shadows.md,
+            transform: "scale(1.1)",
+        },
+    },
+
     icon: {
         color:
             theme.colorScheme === "dark"
@@ -42,7 +51,12 @@ export default function TeamMember({
     return (
         <div>
             <Group noWrap>
-                <Avatar src={avatar} size={94} radius="md" />
+                <Avatar
+                    src={avatar}
+                    className={classes.avatar}
+                    size={94}
+                    radius="md"
+                />
                 <div>
                     <Text
                         size="xs"
