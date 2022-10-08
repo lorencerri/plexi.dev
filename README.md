@@ -17,6 +17,11 @@ This is the source code for the landing page of plexidev.com
 -   Mantine.dev
 -   Vercel
 
+### TODO
+
+-   [ ] Add contact form
+-   [ ] Change .png files to .webp
+
 ### Screenshot
 
 ![Screenshot](https://fs.plexidev.org/api/plexidev-screenshot.jpg)

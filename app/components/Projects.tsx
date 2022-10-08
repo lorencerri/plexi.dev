@@ -9,7 +9,7 @@ import {
 
 import Project from "./Project";
 import { Dots } from "./Dots";
-import { IconPackage, IconRobot } from "@tabler/icons";
+import { IconClock, IconPackage, IconRobot } from "@tabler/icons";
 
 const useStyles = createStyles((theme) => ({
     inner: {
@@ -118,6 +118,9 @@ export default function Projects({ targetRef }: ProjectsProps) {
                                         "Quick.db is an open-source package meant to provide an easy way for beginners and people of all levels to access & store data in a low to medium volume environment. All data is stored persistently via either better-sqlite3 or promise-mysql and comes way various other quality-of-life features."
                                     }
                                     title={"Quick.db"}
+                                    link={
+                                        "https://github.com/plexidev/quick.db"
+                                    }
                                 />
                                 <Project
                                     icon={<IconRobot />}
@@ -125,6 +128,27 @@ export default function Projects({ targetRef }: ProjectsProps) {
                                         "Guardian allows server owners to set strict limits on administration actions (bans, kicks, deletions, etc). Once these limits are met, their Discord permissions are automatically revoked via removing all of their roles."
                                     }
                                     title={"Guardian"}
+                                    link={
+                                        "https://github.com/lorencerri/discord-guardian"
+                                    }
+                                />
+                                <Project
+                                    icon={<IconPackage />}
+                                    description={
+                                        "QuickMongo is a beginner-friendly and feature-rich wrapper for MongoDB that allows you to use Quick.db syntax."
+                                    }
+                                    title={"QuickMongo"}
+                                    link={
+                                        "https://github.com/plexidev/quickmongo"
+                                    }
+                                />
+                                <Project
+                                    icon={<IconClock />}
+                                    description={
+                                        "We have a number of additional projects in works, stay tuned!"
+                                    }
+                                    title={"More Coming Soon"}
+                                    link={"https://plexidev.org"}
                                 />
                             </SimpleGrid>
                         </div>
