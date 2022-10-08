@@ -8,7 +8,6 @@ import {
     Transition,
     Title,
 } from "@mantine/core";
-import styled from "@emotion/styled";
 import { useDisclosure } from "@mantine/hooks";
 
 const useStyles = createStyles((theme) => ({
@@ -75,19 +74,6 @@ const useStyles = createStyles((theme) => ({
         [theme.fn.smallerThan("sm")]: {
             borderRadius: 0,
             padding: theme.spacing.md,
-        },
-    },
-
-    linkActive: {
-        "&, &:hover": {
-            backgroundColor: theme.fn.variant({
-                variant: "light",
-                color: theme.primaryColor,
-            }).background,
-            color: theme.fn.variant({
-                variant: "light",
-                color: theme.primaryColor,
-            }).color,
         },
     },
 }));

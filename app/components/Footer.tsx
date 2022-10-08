@@ -1,4 +1,3 @@
-import styled from "@emotion/styled";
 import { createStyles, Anchor, Group, Title, Transition } from "@mantine/core";
 
 import { useEffect, useState } from "react";
@@ -34,19 +33,6 @@ const useStyles = createStyles((theme) => ({
         [theme.fn.smallerThan("sm")]: {
             borderRadius: 0,
             padding: theme.spacing.md,
-        },
-    },
-
-    linkActive: {
-        "&, &:hover": {
-            backgroundColor: theme.fn.variant({
-                variant: "light",
-                color: theme.primaryColor,
-            }).background,
-            color: theme.fn.variant({
-                variant: "light",
-                color: theme.primaryColor,
-            }).color,
         },
     },
 }));
