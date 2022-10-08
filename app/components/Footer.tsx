@@ -76,7 +76,6 @@ export default function Footer() {
             key={link.label}
             href={link.link}
             sx={{ lineHeight: 1 }}
-            onClick={(event) => event.preventDefault()}
             className={classes.link}
             size="sm"
         >
