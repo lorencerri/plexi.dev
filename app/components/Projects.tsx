@@ -148,7 +148,6 @@ export default function Projects({ targetRef }: ProjectsProps) {
                                         "We have a number of additional projects in the works, stay tuned!"
                                     }
                                     title={"More Coming Soon"}
-                                    link={"https://plexidev.org"}
                                 />
                             </SimpleGrid>
                         </div>

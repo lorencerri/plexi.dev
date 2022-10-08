@@ -47,7 +47,7 @@ interface CardGradientProps {
     title: string;
     description: string;
     icon: ReactNode;
-    link: string;
+    link?: string;
 }
 
 export default function Project({
@@ -75,34 +75,36 @@ export default function Project({
             <Text size="sm" mt="sm" color="dimmed">
                 {description}
             </Text>
-            <Transition
-                mounted={hovered}
-                transition="fade"
-                duration={400}
-                timingFunction="ease"
-            >
-                {(styles) => (
-                    <Anchor href={link} target="_blank">
-                        <Button
-                            leftIcon={<IconExternalLink />}
-                            style={{
-                                ...styles,
-                            }}
-                            className={classes.linkButton}
-                            variant="gradient"
-                            mt={10}
-                            mr={10}
-                            gradient={{
-                                deg: 0,
-                                to: "#C1C2C5",
-                                from: "#3B5BDB",
-                            }}
-                        >
-                            Visit
-                        </Button>
-                    </Anchor>
-                )}
-            </Transition>
+            {link && (
+                <Transition
+                    mounted={hovered}
+                    transition="fade"
+                    duration={400}
+                    timingFunction="ease"
+                >
+                    {(styles) => (
+                        <Anchor href={link} target="_blank">
+                            <Button
+                                leftIcon={<IconExternalLink />}
+                                style={{
+                                    ...styles,
+                                }}
+                                className={classes.linkButton}
+                                variant="gradient"
+                                mt={10}
+                                mr={10}
+                                gradient={{
+                                    deg: 0,
+                                    to: "#C1C2C5",
+                                    from: "#3B5BDB",
+                                }}
+                            >
+                                Visit
+                            </Button>
+                        </Anchor>
+                    )}
+                </Transition>
+            )}
         </Paper>
     );
 }
