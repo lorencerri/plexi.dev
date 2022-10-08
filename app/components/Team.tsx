@@ -76,14 +76,14 @@ const team = [
         title: "Developer",
         avatar: lorencerriAvatar,
         github: "@lorencerri",
-        email: "lorencerri@plexidev.org",
+        discord: "lettuce#2113",
     },
     {
         name: "Zorotic",
         title: "Developer",
         avatar: zoroticAvatar,
         github: "@Zorotic",
-        email: "zorotic@plexidev.org",
+        email: "Zorotic#0001",
     },
     {
         name: "Cartar",

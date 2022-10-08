@@ -1,4 +1,4 @@
-import { createStyles, Avatar, Text, Group } from "@mantine/core";
+import { createStyles, Avatar, Text, Group, Anchor } from "@mantine/core";
 import {
     IconBrandTwitter,
     IconAt,
@@ -21,6 +21,10 @@ const useStyles = createStyles((theme) => ({
             theme.colorScheme === "dark"
                 ? theme.colors.dark[3]
                 : theme.colors.gray[5],
+    },
+
+    linkAnchor: {
+        textDecoration: "none",
     },
 }));
 
@@ -87,9 +91,18 @@ export default function TeamMember({
                                 size={16}
                                 className={classes.icon}
                             />
-                            <Text size="xs" color="dimmed">
-                                {github}
-                            </Text>
+                            <Anchor
+                                className={classes.linkAnchor}
+                                target="_blank"
+                                href={`https://github.com/${github.replace(
+                                    /@/g,
+                                    ""
+                                )}`}
+                            >
+                                <Text size="xs" color="dimmed">
+                                    {github}
+                                </Text>
+                            </Anchor>
                         </Group>
                     )}
 
