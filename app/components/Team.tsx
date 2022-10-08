@@ -73,14 +73,14 @@ const useStyles = createStyles((theme) => ({
 const team = [
     {
         name: "lorencerri",
-        title: "Developer",
+        title: "Founder / Developer",
         avatar: lorencerriAvatar,
         github: "@lorencerri",
         discord: "lettuce#2113",
     },
     {
         name: "Zorotic",
-        title: "Developer",
+        title: "Lead Developer",
         avatar: zoroticAvatar,
         github: "@Zorotic",
         email: "Zorotic#0001",
@@ -121,12 +121,6 @@ const team = [
         discord: "Ittim#0092",
     },
     {
-        name: "Moord",
-        title: "Developer",
-        avatar: MoordAvatar,
-        discord: "Moord#1910",
-    },
-    {
         name: "polaris",
         title: "Developer",
         avatar: polarisAvatar,
@@ -134,23 +128,30 @@ const team = [
         discord: "polaris#9153",
     },
     {
-        name: "rockdog6-6-6",
-        title: "Developer",
-        avatar: rockdog666Avatar,
-        discord: "rockdog6-6-6#6865",
-    },
-    {
-        name: "whomity",
-        title: "Developer",
-        avatar: whomityAvatar,
-        discord: "whomity#9612",
-    },
-    {
         name: "Yahiko",
         title: "Developer",
         avatar: YahikoAvatar,
         github: "@KnowItAllKing",
         discord: "Yahiko#0659",
+    },
+    {
+        name: "Moord",
+        title: "Staff",
+        avatar: MoordAvatar,
+        discord: "Moord#1910",
+    },
+
+    {
+        name: "rockdog6-6-6",
+        title: "Staff",
+        avatar: rockdog666Avatar,
+        discord: "rockdog6-6-6#6865",
+    },
+    {
+        name: "whomity",
+        title: "Staff",
+        avatar: whomityAvatar,
+        discord: "whomity#9612",
     },
 ];
 
