@@ -16,6 +16,8 @@ export const meta: MetaFunction = () => ({
     viewport: "width=device-width,initial-scale=1",
     description:
         "We're a community of developers and creators centered around creating user-friendly applications and developer resources.",
+    "theme-color": "#3b5bdb",
+    "og:image": "https://www.plexidev.org/logo.webp",
 });
 
 createEmotionCache({ key: "mantine" });
