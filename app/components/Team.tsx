@@ -6,7 +6,6 @@ import {
     createStyles,
     GroupedTransition,
 } from "@mantine/core";
-import styled from "@emotion/styled";
 
 import TeamMember from "./TeamMember";
 import { Dots } from "./Dots";
@@ -189,7 +188,8 @@ export default function Team() {
                                 className={classes.subtitle}
                                 style={styles.subtitle}
                             >
-                                Meet The<StyledTitle> Team</StyledTitle>
+                                Meet The
+                                <span style={{ color: "#3b5bdb" }}> Team</span>
                             </Title>
                             <SimpleGrid
                                 cols={3}
@@ -216,7 +216,3 @@ export default function Team() {
         </Container>
     );
 }
-
-const StyledTitle = styled.span`
-    color: #3b5bdb;
-`;

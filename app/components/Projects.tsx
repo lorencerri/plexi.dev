@@ -6,7 +6,6 @@ import {
     createStyles,
     GroupedTransition,
 } from "@mantine/core";
-import styled from "@emotion/styled";
 
 import Project from "./Project";
 import { Dots } from "./Dots";
@@ -98,7 +97,11 @@ export default function Projects({ targetRef }: ProjectsProps) {
                                 style={styles.subtitle}
                                 ref={targetRef}
                             >
-                                Our<StyledTitle> Projects</StyledTitle>
+                                Our
+                                <span style={{ color: "#3b5bdb" }}>
+                                    {" "}
+                                    Projects
+                                </span>
                             </Title>
                             <SimpleGrid
                                 cols={2}
@@ -131,7 +134,3 @@ export default function Projects({ targetRef }: ProjectsProps) {
         </Container>
     );
 }
-
-const StyledTitle = styled.span`
-    color: #3b5bdb;
-`;
