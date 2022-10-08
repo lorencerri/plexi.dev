@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 const useStyles = createStyles((theme) => ({
     card: {
         position: "relative",
-        cursor: "pointer",
+        cursor: "default",
         overflow: "hidden",
         transition: "transform 150ms ease, box-shadow 100ms ease",
         padding: theme.spacing.xl,
