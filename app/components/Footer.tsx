@@ -114,19 +114,19 @@ export default function Footer() {
                         <div className={classes.inner} style={styles}>
                             <Title order={2}>
                                 {displayKeypad ? (
-                                    <div>
+                                    <span>
                                         <span style={{ color: "#3b5bdb" }}>
                                             32
                                         </span>
                                         58
-                                    </div>
+                                    </span>
                                 ) : (
-                                    <div>
+                                    <span>
                                         <span style={{ color: "#3b5bdb" }}>
                                             plexi
                                         </span>
                                         dev
-                                    </div>
+                                    </span>
                                 )}
                             </Title>
 
