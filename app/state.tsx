@@ -18,7 +18,7 @@ export const useStore = create<BearState>()((set) => ({
             if (key === "Back") {
                 if (state.code.length === 0) return { code: state.code };
                 else return { code: state.code.slice(0, -1) };
-            } else if (key === "Enter" && state.code === "1234") {
+            } else if (key === "Enter" && state.code === "3258") {
                 return { success: true };
             }
 

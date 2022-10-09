@@ -8,6 +8,7 @@ import {
     Modal,
     Alert,
 } from "@mantine/core";
+import { useStore } from "app/state";
 import { IconAlertCircle } from "@tabler/icons";
 
 import { useEffect, useState } from "react";
@@ -64,6 +65,7 @@ const links = [
 export default function Footer() {
     const [mounted, setMounted] = useState(false);
     const [opened, setOpened] = useState(false);
+    const displayKeypad = useStore((state) => state.displayKeypad);
     const { classes } = useStyles();
 
     useEffect(() => {
@@ -111,8 +113,21 @@ export default function Footer() {
                     return (
                         <div className={classes.inner} style={styles}>
                             <Title order={2}>
-                                <span style={{ color: "#3b5bdb" }}>plexi</span>
-                                dev
+                                {displayKeypad ? (
+                                    <div>
+                                        <span style={{ color: "#3b5bdb" }}>
+                                            32
+                                        </span>
+                                        58
+                                    </div>
+                                ) : (
+                                    <div>
+                                        <span style={{ color: "#3b5bdb" }}>
+                                            plexi
+                                        </span>
+                                        dev
+                                    </div>
+                                )}
                             </Title>
 
                             <Group>
