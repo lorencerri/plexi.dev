@@ -1,9 +1,19 @@
-import { createStyles, Avatar, Text, Group, Anchor } from "@mantine/core";
+import { useState } from "react";
+import {
+    createStyles,
+    Avatar,
+    Text,
+    Group,
+    Anchor,
+    ActionIcon,
+    Title,
+} from "@mantine/core";
 import {
     IconBrandTwitter,
     IconAt,
     IconBrandGithub,
     IconBrandDiscord,
+    IconSquareNumber1,
 } from "@tabler/icons";
 
 const useStyles = createStyles((theme) => ({
@@ -36,6 +46,8 @@ interface UserInfoIconsProps {
     email?: string;
     github?: string;
     discord?: string;
+    displayKey: boolean;
+    display: string | number;
 }
 
 export default function TeamMember({
@@ -46,17 +58,28 @@ export default function TeamMember({
     email,
     github,
     discord,
+    displayKey,
+    display,
 }: UserInfoIconsProps) {
+    const [clicked, setClicked] = useState(false);
     const { classes } = useStyles();
+
     return (
         <div>
             <Group noWrap>
-                <Avatar
-                    src={avatar}
-                    className={classes.avatar}
-                    size={94}
-                    radius="md"
-                />
+                {displayKey ? (
+                    <ActionIcon size={94} variant="subtle">
+                        <Title order={1}>{display}</Title>
+                    </ActionIcon>
+                ) : (
+                    <Avatar
+                        src={avatar}
+                        className={classes.avatar}
+                        size={94}
+                        radius="md"
+                        onClick={() => setClicked(!clicked)}
+                    />
+                )}
                 <div>
                     <Text
                         size="xs"
