@@ -52,7 +52,7 @@ interface UserInfoIconsProps {
     email?: string;
     github?: string;
     discord?: string;
-    display: string | number;
+    display?: string | number;
     borderColor?: string;
 }
 
