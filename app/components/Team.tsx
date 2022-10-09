@@ -219,8 +219,16 @@ export default function Team() {
         } else if (displayKeypad) {
             return (
                 <div>
-                    Enter The
-                    <span style={{ color: "#3b5bdb" }}> Password</span>
+                    <div>
+                        Enter The
+                        <span style={{ color: "#3b5bdb" }}> Password</span>
+                    </div>
+                    <div className={classes.subtitle}>
+                        <Kbd className={classes.key}>{code[0] || "_"}</Kbd>
+                        <Kbd className={classes.key}>{code[1] || "_"}</Kbd>
+                        <Kbd className={classes.key}>{code[2] || "_"}</Kbd>
+                        <Kbd className={classes.key}>{code[3] || "_"}</Kbd>
+                    </div>
                 </div>
             );
         } else {
@@ -261,32 +269,6 @@ export default function Team() {
                             >
                                 {displayText()}
                             </Title>
-                            <Transition
-                                mounted={displayKeypad && !success}
-                                transition="slide-down"
-                                duration={1000}
-                                timingFunction="ease"
-                            >
-                                {(styles) => (
-                                    <div
-                                        style={styles}
-                                        className={classes.subtitle}
-                                    >
-                                        <Kbd className={classes.key}>
-                                            {code[0] || "_"}
-                                        </Kbd>
-                                        <Kbd className={classes.key}>
-                                            {code[1] || "_"}
-                                        </Kbd>
-                                        <Kbd className={classes.key}>
-                                            {code[2] || "_"}
-                                        </Kbd>
-                                        <Kbd className={classes.key}>
-                                            {code[3] || "_"}
-                                        </Kbd>
-                                    </div>
-                                )}
-                            </Transition>
                             <SimpleGrid
                                 cols={3}
                                 spacing={50}
