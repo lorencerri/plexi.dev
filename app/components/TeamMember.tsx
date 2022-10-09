@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
     createStyles,
     Avatar,
@@ -13,8 +12,10 @@ import {
     IconAt,
     IconBrandGithub,
     IconBrandDiscord,
-    IconSquareNumber1,
 } from "@tabler/icons";
+import shallow from "zustand/shallow";
+
+import { useStore } from "app/state";
 
 const useStyles = createStyles((theme) => ({
     avatar: {
@@ -23,7 +24,12 @@ const useStyles = createStyles((theme) => ({
         "&:hover": {
             boxShadow: theme.shadows.md,
             transform: "scale(1.1)",
+            cursor: "pointer",
         },
+    },
+
+    button: {
+        borderRadius: 8,
     },
 
     icon: {
@@ -46,8 +52,8 @@ interface UserInfoIconsProps {
     email?: string;
     github?: string;
     discord?: string;
-    displayKey: boolean;
     display: string | number;
+    borderColor?: string;
 }
 
 export default function TeamMember({
@@ -58,17 +64,31 @@ export default function TeamMember({
     email,
     github,
     discord,
-    displayKey,
     display,
+    borderColor,
 }: UserInfoIconsProps) {
-    const [clicked, setClicked] = useState(false);
     const { classes } = useStyles();
+
+    const { displayKeypad, enableKeypad, pressKey } = useStore(
+        (state) => ({
+            displayKeypad: state.displayKeypad,
+            enableKeypad: state.enableKeypad,
+            pressKey: state.pressKey,
+        }),
+        shallow
+    );
 
     return (
         <div>
             <Group noWrap>
-                {displayKey ? (
-                    <ActionIcon size={94} variant="subtle">
+                {displayKeypad && display ? (
+                    <ActionIcon
+                        size={94}
+                        variant="outline"
+                        className={classes.button}
+                        color={borderColor}
+                        onClick={() => pressKey(display)}
+                    >
                         <Title order={1}>{display}</Title>
                     </ActionIcon>
                 ) : (
@@ -77,7 +97,7 @@ export default function TeamMember({
                         className={classes.avatar}
                         size={94}
                         radius="md"
-                        onClick={() => setClicked(!clicked)}
+                        onClick={() => enableKeypad()}
                     />
                 )}
                 <div>
