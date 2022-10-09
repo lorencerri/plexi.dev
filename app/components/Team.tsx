@@ -10,18 +10,18 @@ import {
 import TeamMember from "./TeamMember";
 import { Dots } from "./Dots";
 
-import lorencerriAvatar from "app/images/avatars/lorencerri.jpg";
-import zoroticAvatar from "app/images/avatars/Zorotic.gif";
-import CartarAvatar from "app/images/avatars/Cartar.gif";
-import FreezInAvatar from "app/images/avatars/FreezIn.png";
-import hasteAvatar from "app/images/avatars/haste.png";
-import ImDarkDiamondAvatar from "app/images/avatars/ImDarkDiamond.png";
-import IttimAvatar from "app/images/avatars/Ittim.png";
-import MoordAvatar from "app/images/avatars/Moord.png";
-import polarisAvatar from "app/images/avatars/polaris.png";
-import rockdog666Avatar from "app/images/avatars/rockdog6-6-6.png";
-import whomityAvatar from "app/images/avatars/whomity.png";
-import YahikoAvatar from "app/images/avatars/Yahiko.png";
+import lorencerriAvatar from "app/images/avatars/lorencerri.webp";
+import zoroticAvatar from "app/images/avatars/Zorotic.webp";
+import CartarAvatar from "app/images/avatars/Cartar.webp";
+import FreezInAvatar from "app/images/avatars/FreezIn.webp";
+import hasteAvatar from "app/images/avatars/haste.webp";
+import ImDarkDiamondAvatar from "app/images/avatars/ImDarkDiamond.webp";
+import IttimAvatar from "app/images/avatars/Ittim.webp";
+import MoordAvatar from "app/images/avatars/Moord.webp";
+import polarisAvatar from "app/images/avatars/polaris.webp";
+import rockdog666Avatar from "app/images/avatars/rockdog6-6-6.webp";
+import whomityAvatar from "app/images/avatars/whomity.webp";
+import YahikoAvatar from "app/images/avatars/Yahiko.webp";
 
 const useStyles = createStyles((theme) => ({
     inner: {
@@ -77,6 +77,7 @@ const team = [
         avatar: lorencerriAvatar,
         github: "@lorencerri",
         discord: "lettuce#2113",
+        display: 1,
     },
     {
         name: "Zorotic",
@@ -84,6 +85,7 @@ const team = [
         avatar: zoroticAvatar,
         github: "@Zorotic",
         email: "Zorotic#0001",
+        display: 2,
     },
     {
         name: "Cartar",
@@ -91,6 +93,7 @@ const team = [
         avatar: CartarAvatar,
         github: "@realCartar",
         discord: "Cartar#0001",
+        display: 3,
     },
     {
         name: "FreezIn",
@@ -98,6 +101,7 @@ const team = [
         avatar: FreezInAvatar,
         github: "@alexy4744",
         discord: "FreezIn#0086",
+        display: 4,
     },
     {
         name: "haste",
@@ -105,6 +109,7 @@ const team = [
         avatar: hasteAvatar,
         github: "@hhaste",
         discord: "haste#3701",
+        display: 5,
     },
     {
         name: "ImDarkDiamond",
@@ -112,6 +117,7 @@ const team = [
         avatar: ImDarkDiamondAvatar,
         github: "@ImDarkDiamond",
         discord: "ImDarkDiamond#0001",
+        display: 6,
     },
     {
         name: "Ittim",
@@ -119,6 +125,7 @@ const team = [
         avatar: IttimAvatar,
         github: "@TheIttim",
         discord: "Ittim#0092",
+        display: 7,
     },
     {
         name: "polaris",
@@ -126,6 +133,7 @@ const team = [
         avatar: polarisAvatar,
         github: "@impolqris",
         discord: "polaris#9153",
+        display: 8,
     },
     {
         name: "Yahiko",
@@ -133,12 +141,14 @@ const team = [
         avatar: YahikoAvatar,
         github: "@KnowItAllKing",
         discord: "Yahiko#0659",
+        display: 9,
     },
     {
         name: "Moord",
         title: "Staff",
         avatar: MoordAvatar,
         discord: "Moord#1910",
+        display: "Back",
     },
 
     {
@@ -146,17 +156,20 @@ const team = [
         title: "Staff",
         avatar: rockdog666Avatar,
         discord: "rockdog6-6-6#6865",
+        display: 0,
     },
     {
         name: "whomity",
         title: "Staff",
         avatar: whomityAvatar,
         discord: "whomity#9612",
+        display: "Enter",
     },
 ];
 
 export default function Team() {
     const [mounted, setMounted] = useState(false);
+    const [clicked, setClicked] = useState(false);
     const { classes } = useStyles();
 
     useEffect(() => {
@@ -204,6 +217,7 @@ export default function Team() {
                                 {team.map((member) => {
                                     return (
                                         <TeamMember
+                                            displayKey={clicked}
                                             key={member.name}
                                             {...member}
                                         />
