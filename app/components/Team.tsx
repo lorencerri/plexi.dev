@@ -4,11 +4,15 @@ import {
     Container,
     SimpleGrid,
     createStyles,
+    Kbd,
     GroupedTransition,
+    Transition,
 } from "@mantine/core";
 
 import TeamMember from "./TeamMember";
 import { Dots } from "./Dots";
+
+import { useStore } from "app/state";
 
 import lorencerriAvatar from "app/images/avatars/lorencerri.webp";
 import zoroticAvatar from "app/images/avatars/Zorotic.webp";
@@ -22,6 +26,9 @@ import polarisAvatar from "app/images/avatars/polaris.webp";
 import rockdog666Avatar from "app/images/avatars/rockdog6-6-6.webp";
 import whomityAvatar from "app/images/avatars/whomity.webp";
 import YahikoAvatar from "app/images/avatars/Yahiko.webp";
+import ZelakAvatar from "app/images/avatars/Zelak.webp";
+
+import shallow from "zustand/shallow";
 
 const useStyles = createStyles((theme) => ({
     inner: {
@@ -51,6 +58,12 @@ const useStyles = createStyles((theme) => ({
         paddingBottom: 50,
     },
 
+    key: {
+        padding: 10,
+        margin: 10,
+        minWidth: "28px",
+    },
+
     subtitle: {
         textAlign: "center",
         fontWeight: 800,
@@ -69,6 +82,16 @@ const useStyles = createStyles((theme) => ({
         marginTop: 40,
     },
 }));
+
+const special = [
+    {
+        name: "Zelak",
+        title: "First Member, Ex-Developer",
+        avatar: ZelakAvatar,
+        github: "@ZelAk312",
+        discord: "Zelak#1444",
+    },
+];
 
 const team = [
     {
@@ -149,6 +172,7 @@ const team = [
         avatar: MoordAvatar,
         discord: "Moord#1910",
         display: "Back",
+        borderColor: "red",
     },
 
     {
@@ -164,17 +188,50 @@ const team = [
         avatar: whomityAvatar,
         discord: "whomity#9612",
         display: "Enter",
+        borderColor: "green",
     },
 ];
 
 export default function Team() {
     const [mounted, setMounted] = useState(false);
-    const [clicked, setClicked] = useState(false);
+    const { displayKeypad, code, success } = useStore(
+        (state) => ({
+            displayKeypad: state.displayKeypad,
+            code: state.code,
+            success: state.success,
+        }),
+        shallow
+    );
     const { classes } = useStyles();
 
     useEffect(() => {
         setMounted(true);
     }, [mounted]);
+
+    const displayText = () => {
+        if (success) {
+            return (
+                <div>
+                    <span style={{ color: "#3b5bdb" }}>Thank you</span> to these
+                    wonderful individuals!
+                </div>
+            );
+        } else if (displayKeypad) {
+            return (
+                <div>
+                    Enter The
+                    <span style={{ color: "#3b5bdb" }}> Password</span>
+                </div>
+            );
+        } else {
+            return (
+                <div>
+                    Meet The
+                    <span style={{ color: "#3b5bdb" }}> Team</span>
+                </div>
+            );
+        }
+    };
 
     return (
         <Container className={classes.wrapper} size={1050}>
@@ -202,9 +259,34 @@ export default function Team() {
                                 className={classes.subtitle}
                                 style={styles.subtitle}
                             >
-                                Meet The
-                                <span style={{ color: "#3b5bdb" }}> Team</span>
+                                {displayText()}
                             </Title>
+                            <Transition
+                                mounted={displayKeypad && !success}
+                                transition="slide-down"
+                                duration={1000}
+                                timingFunction="ease"
+                            >
+                                {(styles) => (
+                                    <div
+                                        style={styles}
+                                        className={classes.subtitle}
+                                    >
+                                        <Kbd className={classes.key}>
+                                            {code[0] || "_"}
+                                        </Kbd>
+                                        <Kbd className={classes.key}>
+                                            {code[1] || "_"}
+                                        </Kbd>
+                                        <Kbd className={classes.key}>
+                                            {code[2] || "_"}
+                                        </Kbd>
+                                        <Kbd className={classes.key}>
+                                            {code[3] || "_"}
+                                        </Kbd>
+                                    </div>
+                                )}
+                            </Transition>
                             <SimpleGrid
                                 cols={3}
                                 spacing={50}
@@ -214,10 +296,9 @@ export default function Team() {
                                 className={classes.members}
                                 style={styles.team}
                             >
-                                {team.map((member) => {
+                                {(success ? special : team).map((member) => {
                                     return (
                                         <TeamMember
-                                            displayKey={clicked}
                                             key={member.name}
                                             {...member}
                                         />
