@@ -179,7 +179,7 @@ const team = [
         title: "Staff",
         avatar: rockdog666Avatar,
         discord: "rockdog6-6-6#6865",
-        display: 0,
+        display: "0",
     },
     {
         name: "whomity",
