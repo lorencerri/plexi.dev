@@ -212,8 +212,8 @@ export default function Team() {
         if (success) {
             return (
                 <div>
-                    <span style={{ color: "#3b5bdb" }}>Thank you</span> to these
-                    wonderful individuals!
+                    Special <span style={{ color: "#3b5bdb" }}>thank you</span>{" "}
+                    to these wonderful individuals!
                 </div>
             );
         } else if (displayKeypad) {

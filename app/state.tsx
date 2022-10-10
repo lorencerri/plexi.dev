@@ -15,15 +15,17 @@ export const useStore = create<BearState>()((set) => ({
     enableKeypad: () => set({ displayKeypad: true }),
     pressKey: (key) => {
         set((state) => {
-            if (key === "Back") {
-                if (state.code.length === 0) return { code: state.code };
-                else return { code: state.code.slice(0, -1) };
-            } else if (key === "Enter" && state.code === "3258") {
-                return { success: true };
+            switch (key) {
+                case "Back":
+                    if (state.code.length === 0) return { code: state.code };
+                    else return { code: state.code.slice(0, -1) };
+                case "Enter":
+                    if (state.code === "3258") return { success: true };
+                    else return { code: "" };
+                default:
+                    if (state.code.length === 4) return { code: state.code };
+                    return { code: state.code + key };
             }
-
-            if (state.code.length === 4) return { code: state.code };
-            return { code: state.code + key };
         });
     },
 }));
