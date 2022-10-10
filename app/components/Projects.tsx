@@ -9,6 +9,7 @@ import {
 
 import Project from "./Project";
 import { Dots } from "./Dots";
+import { useStore } from "app/state";
 import { IconClock, IconPackage, IconRobot } from "@tabler/icons";
 
 const useStyles = createStyles((theme) => ({
@@ -64,6 +65,7 @@ interface ProjectsProps {
 
 export default function Projects({ targetRef }: ProjectsProps) {
     const [mounted, setMounted] = useState(false);
+    const success = useStore((state) => state.success);
     const { classes } = useStyles();
 
     useEffect(() => {
@@ -72,10 +74,26 @@ export default function Projects({ targetRef }: ProjectsProps) {
 
     return (
         <Container className={classes.wrapper} size={1050}>
-            <Dots className={classes.dots} style={{ left: 100, top: 1600 }} />
-            <Dots className={classes.dots} style={{ left: 160, top: 1600 }} />
-            <Dots className={classes.dots} style={{ left: 100, top: 1540 }} />
-            <Dots className={classes.dots} style={{ right: 100, top: 1660 }} />
+            {!success && (
+                <span>
+                    <Dots
+                        className={classes.dots}
+                        style={{ left: 100, top: 1600 }}
+                    />
+                    <Dots
+                        className={classes.dots}
+                        style={{ left: 160, top: 1600 }}
+                    />
+                    <Dots
+                        className={classes.dots}
+                        style={{ left: 100, top: 1540 }}
+                    />
+                    <Dots
+                        className={classes.dots}
+                        style={{ right: 100, top: 1660 }}
+                    />
+                </span>
+            )}
 
             <GroupedTransition
                 mounted={mounted}
