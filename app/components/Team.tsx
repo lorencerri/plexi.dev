@@ -6,7 +6,6 @@ import {
     createStyles,
     Kbd,
     GroupedTransition,
-    Transition,
 } from "@mantine/core";
 
 import TeamMember from "./TeamMember";
