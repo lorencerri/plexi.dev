@@ -135,7 +135,7 @@ export default function Projects({ targetRef }: ProjectsProps) {
                                 <Project
                                     icon={<IconPackage />}
                                     description={
-                                        "QuickMongo is a beginner-friendly and feature-rich wrapper for MongoDB that allows you to use Quick.db syntax."
+                                        "QuickMongo is a beginner-friendly and feature-rich wrapper for MongoDB that allows you to use Quick.db's Key-Value based syntax."
                                     }
                                     title={"QuickMongo"}
                                     link={
