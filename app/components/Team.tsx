@@ -118,6 +118,13 @@ const team = [
         display: 3,
     },
     {
+        name: "Zelak",
+        title: "Developer",
+        avatar: ZelakAvatar,
+        github: "@ZelAk312",
+        discord: "Zelak#1444",
+    },
+    {
         name: "FreezIn",
         title: "Developer",
         avatar: FreezInAvatar,

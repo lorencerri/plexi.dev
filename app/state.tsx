@@ -12,7 +12,13 @@ export const useStore = create<BearState>()((set) => ({
     displayKeypad: false,
     code: "",
     success: false,
-    enableKeypad: () => set({ displayKeypad: true }),
+    enableKeypad: () =>
+        set(() => {
+            console.log(
+                "The code is in the bottom left corner of the webpage if you're having trouble finding it!"
+            );
+            return { displayKeypad: true };
+        }),
     pressKey: (key) => {
         set((state) => {
             switch (key) {
