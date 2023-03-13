@@ -10,7 +10,7 @@ import {
 import Project from "./Project";
 import { Dots } from "./Dots";
 import { useStore } from "app/state";
-import { IconClock, IconPackage, IconRobot } from "@tabler/icons";
+import { IconClock, IconPackage, IconRobot } from "@tabler/icons-react";
 
 const useStyles = createStyles((theme) => ({
   inner: {

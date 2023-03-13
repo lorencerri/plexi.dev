@@ -9,7 +9,7 @@ import {
   Alert,
 } from "@mantine/core";
 import { useStore } from "app/state";
-import { IconAlertCircle } from "@tabler/icons";
+import { IconAlertCircle } from "@tabler/icons-react";
 
 import { useEffect, useState } from "react";
 
