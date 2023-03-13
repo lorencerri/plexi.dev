@@ -26,6 +26,9 @@ import rockdog666Avatar from "app/images/avatars/rockdog6-6-6.webp";
 import whomityAvatar from "app/images/avatars/whomity.webp";
 import YahikoAvatar from "app/images/avatars/Yahiko.webp";
 import ZelakAvatar from "app/images/avatars/Zelak.webp";
+import DiscordBlue from "app/images/avatars/discord-blue.webp";
+import DiscordRed from "app/images/avatars/discord-red.webp";
+import DiscordYellow from "app/images/avatars/discord-yellow.webp";
 
 import shallow from "zustand/shallow";
 
@@ -84,11 +87,19 @@ const useStyles = createStyles((theme) => ({
 
 const special = [
   {
-    name: "Zelak",
-    title: "First Member, Ex-Developer",
-    avatar: ZelakAvatar,
-    github: "@ZelAk312",
-    discord: "Zelak#1444",
+    name: "You",
+    title: "Supporter",
+    avatar: DiscordBlue,
+  },
+  {
+    name: "You",
+    title: "Supporter",
+    avatar: DiscordRed,
+  },
+  {
+    name: "You",
+    title: "Supporter",
+    avatar: DiscordYellow,
   },
 ];
 
@@ -218,8 +229,9 @@ export default function Team() {
     if (success) {
       return (
         <div>
-          Special <span style={{ color: "#3b5bdb" }}>thank you</span> to these
-          wonderful individuals!
+          Special <span style={{ color: "#3b5bdb" }}>thank you</span> to{" "}
+          <span style={{ color: "#3b5bdb" }}>you</span> for your continued
+          support!
         </div>
       );
     } else if (displayKeypad) {
