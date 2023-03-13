@@ -5,7 +5,7 @@ import {
   SimpleGrid,
   createStyles,
   Kbd,
-  GroupedTransition,
+  Transition,
 } from "@mantine/core";
 
 import TeamMember from "./TeamMember";
@@ -229,8 +229,8 @@ export default function Team() {
     if (success) {
       return (
         <div>
-          Special <span style={{ color: "#3b5bdb" }}>thank you</span> to{" "}
-          <span style={{ color: "#3b5bdb" }}>you</span> for your continued
+          Special <span style={{ color: "#3b5bdb" }}>thank you</span> to
+          <span style={{ color: "#3b5bdb" }}> you</span> for your continued
           support!
         </div>
       );
@@ -239,7 +239,8 @@ export default function Team() {
         <div>
           <div>
             Enter The
-            <span style={{ color: "#3b5bdb" }}> Password</span>
+            <span style={{ color: "#3b5bdb" }}> Password</span>{" "}
+            <span style={{ color: "#DB3B5B", fontSize: 12 }}>(Hint)</span>
           </div>
           <div className={classes.subtitle}>
             <Kbd className={classes.key}>{code[0] || "_"}</Kbd>
@@ -266,42 +267,40 @@ export default function Team() {
       <Dots className={classes.dots} style={{ left: 100, top: 940 }} />
       <Dots className={classes.dots} style={{ right: 100, top: 860 }} />
 
-      <GroupedTransition
-        mounted={mounted}
-        transitions={{
-          subtitle: { duration: 2500, transition: "fade" },
-          team: {
-            duration: 2500,
-            transition: "fade",
-            timingFunction: "ease",
-          },
-        }}
-      >
-        {(styles) => {
-          return (
-            <div className={classes.inner}>
-              <Title
-                order={3}
-                className={classes.subtitle}
-                style={styles.subtitle}
-              >
+      <div className={classes.inner}>
+        <Transition mounted={mounted} duration={2500} transition="fade">
+          {(styles) => {
+            return (
+              <Title order={3} className={classes.subtitle} style={styles}>
                 {displayText()}
               </Title>
+            );
+          }}
+        </Transition>
+
+        <Transition
+          mounted={mounted}
+          duration={2500}
+          transition="fade"
+          timingFunction="ease"
+        >
+          {(styles) => {
+            return (
               <SimpleGrid
                 cols={3}
                 spacing={50}
                 breakpoints={[{ maxWidth: 550, cols: 1, spacing: 40 }]}
                 className={classes.members}
-                style={styles.team}
+                style={styles}
               >
                 {(success ? special : team).map((member) => {
                   return <TeamMember key={member.name} {...member} />;
                 })}
               </SimpleGrid>
-            </div>
-          );
-        }}
-      </GroupedTransition>
+            );
+          }}
+        </Transition>
+      </div>
     </Container>
   );
 }
