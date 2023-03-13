@@ -9,6 +9,7 @@ import {
 } from "@remix-run/react";
 import { MantineProvider, createEmotionCache } from "@mantine/core";
 import { StylesPlaceholder } from "@mantine/remix";
+import { ModalsProvider } from "@mantine/modals";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -29,19 +30,21 @@ export default function App() {
       withGlobalStyles
       withNormalizeCSS
     >
-      <html lang="en">
-        <head>
-          <StylesPlaceholder />
-          <Meta />
-          <Links />
-        </head>
-        <body>
-          <Outlet />
-          <ScrollRestoration />
-          <Scripts />
-          <LiveReload />
-        </body>
-      </html>
+      <ModalsProvider>
+        <html lang="en">
+          <head>
+            <StylesPlaceholder />
+            <Meta />
+            <Links />
+          </head>
+          <body>
+            <Outlet />
+            <ScrollRestoration />
+            <Scripts />
+            <LiveReload />
+          </body>
+        </html>
+      </ModalsProvider>
     </MantineProvider>
   );
 }

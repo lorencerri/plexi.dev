@@ -5,13 +5,13 @@ import {
   Title,
   Transition,
   Button,
-  Modal,
   Alert,
 } from "@mantine/core";
 import { useStore } from "app/state";
 import { IconAlertCircle } from "@tabler/icons-react";
 
 import { useEffect, useState } from "react";
+import { modals } from "@mantine/modals";
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -64,7 +64,6 @@ const links = [
 
 export default function Footer() {
   const [mounted, setMounted] = useState(false);
-  const [opened, setOpened] = useState(false);
   const displayKeypad = useStore((state) => state.displayKeypad);
   const { classes } = useStyles();
 
@@ -85,23 +84,29 @@ export default function Footer() {
     </Anchor>
   ));
 
+  const openSupportModal = () =>
+    modals.open({
+      title: "Contact Us",
+      withCloseButton: false,
+      children: (
+        <>
+          <Alert
+            icon={<IconAlertCircle size={16} />}
+            title="Oops!"
+            color="yellow"
+          >
+            This component is still under development. You can contact us by
+            joining our Discord server.
+          </Alert>
+          <Button fullWidth mt="md" onClick={() => void modals.closeAll()}>
+            Ok
+          </Button>
+        </>
+      ),
+    });
+
   return (
     <div>
-      <Modal
-        opened={opened}
-        onClose={() => setOpened(false)}
-        overlayProps={{ opacity: 0.55, blur: 3 }}
-        title="Contact Us"
-      >
-        <Alert
-          icon={<IconAlertCircle size={16} />}
-          title="Oops!"
-          color="yellow"
-        >
-          This component is still under development. You can contact us by
-          joining our Discord server.
-        </Alert>
-      </Modal>
       <Transition
         transition="fade"
         mounted={mounted}
@@ -114,7 +119,7 @@ export default function Footer() {
               <Title order={2}>
                 {displayKeypad ? (
                   <span>
-                    <span style={{ color: "#3b5bdb" }}>85</span>
+                    <span style={{ color: "#3b5bdb" }}>58</span>
                     17
                   </span>
                 ) : (
@@ -129,7 +134,7 @@ export default function Footer() {
                 {items}
                 <Button
                   style={{ backgroundColor: "#3b5bdb" }}
-                  onClick={() => setOpened(true)}
+                  onClick={() => openSupportModal()}
                 >
                   Contact Us
                 </Button>

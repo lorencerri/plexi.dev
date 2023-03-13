@@ -26,9 +26,9 @@ export const useStore = create<BearState>()((set) => ({
           if (state.code.length === 0) return { code: state.code };
           else return { code: state.code.slice(0, -1) };
         case "Enter":
-          if (state.code === "8517")
+          if (state.code === "5817")
             return {
-              success: true, // 8/5/17 -> August 5th, 2017 (Start of Plexi)
+              success: true, // 5/8/17 -> August 5th, 2017 (Start of Plexi)
             };
           else return { code: "" };
         default:

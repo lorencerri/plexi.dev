@@ -6,6 +6,10 @@ import {
   createStyles,
   Kbd,
   Transition,
+  Alert,
+  Button,
+  Text,
+  Accordion,
 } from "@mantine/core";
 
 import TeamMember from "./TeamMember";
@@ -30,12 +34,26 @@ import DiscordBlue from "app/images/avatars/discord-blue.webp";
 import DiscordRed from "app/images/avatars/discord-red.webp";
 import DiscordYellow from "app/images/avatars/discord-yellow.webp";
 
-import shallow from "zustand/shallow";
+import { shallow } from "zustand/shallow";
+import { modals } from "@mantine/modals";
+import { IconAlertCircle } from "@tabler/icons-react";
 
 const useStyles = createStyles((theme) => ({
   inner: {
     position: "relative",
     zIndex: 1,
+  },
+
+  hintText: {
+    color: "#DB3B5B",
+    fontSize: 12,
+    "&:hover": {
+      cursor: "pointer",
+    },
+  },
+
+  themedText: {
+    color: "#DB3B5B",
   },
 
   dots: {
@@ -240,7 +258,9 @@ export default function Team() {
           <div>
             Enter The
             <span style={{ color: "#3b5bdb" }}> Password</span>{" "}
-            <span style={{ color: "#DB3B5B", fontSize: 12 }}>(Hint)</span>
+            <span className={classes.hintText} onClick={openHintModal}>
+              (Hint)
+            </span>
           </div>
           <div className={classes.subtitle}>
             <Kbd className={classes.key}>{code[0] || "_"}</Kbd>
@@ -259,6 +279,47 @@ export default function Team() {
       );
     }
   };
+
+  const openHintModal = () =>
+    modals.openConfirmModal({
+      title: "Hint #1",
+      withCloseButton: false,
+      labels: { confirm: "Next Hint", cancel: "Close" },
+      closeOnConfirm: false,
+      children: (
+        <>
+          Plexi Development was created on
+          <span className={classes.themedText}> August 8th, 2017</span>.
+        </>
+      ),
+      onConfirm: () =>
+        modals.openConfirmModal({
+          title: "Hint #2",
+          withCloseButton: false,
+          labels: { confirm: "Answer", cancel: "Back" },
+          closeOnConfirm: false,
+          children: (
+            <>
+              Plexi Development was created on
+              <span className={classes.themedText}> 5/8/2017</span>.
+            </>
+          ),
+          onConfirm: () =>
+            modals.open({
+              withCloseButton: false,
+              title: "Answer",
+              children: (
+                <>
+                  The code is
+                  <span className={classes.themedText}> 5817</span>.
+                  <Button mt="md" fullWidth onClick={() => modals.closeAll()}>
+                    Thanks!
+                  </Button>
+                </>
+              ),
+            }),
+        }),
+    });
 
   return (
     <Container className={classes.wrapper} size={1050}>
