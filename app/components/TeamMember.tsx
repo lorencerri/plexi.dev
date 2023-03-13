@@ -13,7 +13,7 @@ import {
   IconBrandGithub,
   IconBrandDiscord,
 } from "@tabler/icons-react";
-import shallow from "zustand/shallow";
+import { shallow } from "zustand/shallow";
 
 import { useStore } from "app/state";
 
