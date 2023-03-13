@@ -90,8 +90,7 @@ export default function Footer() {
       <Modal
         opened={opened}
         onClose={() => setOpened(false)}
-        overlayOpacity={0.55}
-        overlayBlur={3}
+        overlayProps={{ opacity: 0.55, blur: 3 }}
         title="Contact Us"
       >
         <Alert
