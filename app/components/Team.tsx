@@ -132,11 +132,19 @@ const team = [
   },
   {
     name: "Zorotic",
-    title: "Lead Developer",
+    title: "Developer / Administration",
     avatar: zoroticAvatar,
     github: "@Zorotic",
     email: "Zorotic#0001",
     display: 2,
+  },
+  {
+    name: "Zelak",
+    title: "Lead Developer",
+    avatar: ZelakAvatar,
+    github: "@ZelAk312",
+    discord: "Zelak#1444",
+    display: 3,
   },
   {
     name: "Cartar",
@@ -144,14 +152,6 @@ const team = [
     avatar: CartarAvatar,
     github: "@realCartar",
     discord: "Cartar#0001",
-    display: 3,
-  },
-  {
-    name: "Zelak",
-    title: "Developer",
-    avatar: ZelakAvatar,
-    github: "@ZelAk312",
-    discord: "Zelak#1444",
     display: 4,
   },
   {
