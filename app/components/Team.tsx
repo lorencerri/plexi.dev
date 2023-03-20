@@ -132,7 +132,7 @@ const team = [
   },
   {
     name: "Zorotic",
-    title: "Developer / Administration",
+    title: "Administration / Developer",
     avatar: zoroticAvatar,
     github: "@Zorotic",
     email: "Zorotic#0001",
@@ -140,7 +140,7 @@ const team = [
   },
   {
     name: "Zelak",
-    title: "Lead Developer",
+    title: "Lead Developer & Maintainer",
     avatar: ZelakAvatar,
     github: "@ZelAk312",
     discord: "Zelak#1444",
