@@ -6,10 +6,7 @@ import {
   createStyles,
   Kbd,
   Transition,
-  Alert,
   Button,
-  Text,
-  Accordion,
 } from "@mantine/core";
 
 import TeamMember from "./TeamMember";
@@ -36,7 +33,6 @@ import DiscordYellow from "app/images/avatars/discord-yellow.webp";
 
 import { shallow } from "zustand/shallow";
 import { modals } from "@mantine/modals";
-import { IconAlertCircle } from "@tabler/icons-react";
 
 const useStyles = createStyles((theme) => ({
   inner: {
