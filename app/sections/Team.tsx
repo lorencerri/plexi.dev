@@ -9,8 +9,8 @@ import {
   Button,
 } from "@mantine/core";
 
-import TeamMember from "./TeamMember";
-import { Dots } from "./Dots";
+import TeamMember from "../components/TeamMember";
+import { Dots } from "../components/Dots";
 
 import { useStore } from "app/state";
 

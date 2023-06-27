@@ -7,10 +7,10 @@ import {
   Transition,
 } from "@mantine/core";
 
-import { Dots } from "./Dots";
+import { Dots } from "../components/Dots";
 import { useStore } from "app/state";
-import { IconClock, IconPackage, IconRobot } from "@tabler/icons-react";
-import ProjectLink from "./ProjectLink";
+import { IconPackage, IconRobot } from "@tabler/icons-react";
+import ProjectRow from "../components/ProjectRow";
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -108,19 +108,19 @@ export default function QuickLinks() {
                   </tr>
                 </thead>
                 <tbody>
-                  <ProjectLink
+                  <ProjectRow
                     icon={<IconPackage />}
                     title={"Quick.db"}
                     author={"Zelak312"}
                     link={"https://github.com/plexidev/quick.db"}
                   />
-                  <ProjectLink
+                  <ProjectRow
                     icon={<IconRobot />}
                     title={"Guardian"}
                     author={"lorencerri"}
                     link={"https://github.com/lorencerri/discord-guardian"}
                   />
-                  <ProjectLink
+                  <ProjectRow
                     icon={<IconPackage />}
                     title={"QuickMongo"}
                     author={"Zelak312"}

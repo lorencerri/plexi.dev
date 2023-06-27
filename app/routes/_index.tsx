@@ -1,11 +1,11 @@
 import { useScrollIntoView } from "@mantine/hooks";
 
-import Header from "app/components/Header";
-import Hero from "app/components/Hero";
-import Team from "app/components/Team";
-import Projects from "app/components/Projects";
-import Footer from "app/components/Footer";
-import QuickLinks from "~/components/QuickLinks";
+import Header from "app/sections/Header";
+import Hero from "app/sections/Hero";
+import Team from "app/sections/Team";
+import Projects from "app/sections/Projects";
+import Footer from "~/sections/Footer";
+import QuickLinks from "~/sections/QuickLinks";
 
 export default function Index() {
   const { scrollIntoView, targetRef } = useScrollIntoView<HTMLDivElement>({

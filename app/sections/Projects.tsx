@@ -7,8 +7,8 @@ import {
   Transition,
 } from "@mantine/core";
 
-import Project from "./Project";
-import { Dots } from "./Dots";
+import Project from "../components/Project";
+import { Dots } from "../components/Dots";
 import { useStore } from "app/state";
 import { IconClock, IconPackage, IconRobot } from "@tabler/icons-react";
 
