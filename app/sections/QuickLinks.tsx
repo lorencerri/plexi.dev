@@ -134,13 +134,13 @@ export default function QuickLinks() {
                   <ProjectRow
                     icon={<IconPackage />}
                     title={"Quick.db"}
-                    author={"Zelak312"}
+                    author={"Zelak"}
                     link={"https://github.com/plexidev/quick.db"}
                   />
                   <ProjectRow
                     icon={<IconPackage />}
                     title={"QuickMongo"}
-                    author={"Zelak312"}
+                    author={"Zelak"}
                     link={"https://github.com/plexidev/quickmongo"}
                   />
                   <ProjectRow
