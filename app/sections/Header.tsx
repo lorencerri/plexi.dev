@@ -33,6 +33,14 @@ const useStyles = createStyles((theme) => ({
   },
 
   header: {
+    borderBottom: "none",
+    marginBottom: 120,
+    [theme.fn.smallerThan("sm")]: {
+      marginBottom: 10,
+    },
+  },
+
+  headerContainer: {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -102,8 +110,8 @@ export default function CustomHeader() {
   ));
 
   return (
-    <Header height={60} mb={120} style={{ borderBottom: "none" }}>
-      <Container className={classes.header}>
+    <Header height={60} className={classes.header}>
+      <Container className={classes.headerContainer}>
         <Title order={2}>
           <span style={{ color: "#3b5bdb" }}>plexi</span>.dev
         </Title>

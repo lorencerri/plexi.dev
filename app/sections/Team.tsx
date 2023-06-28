@@ -72,6 +72,10 @@ const useStyles = createStyles((theme) => ({
   wrapper: {
     paddingTop: 80,
     paddingBottom: 50,
+    [theme.fn.smallerThan("sm")]: {
+      paddingTop: 30,
+      paddingBottom: 10,
+    },
   },
 
   key: {

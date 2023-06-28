@@ -15,9 +15,9 @@ const useStyles = createStyles((theme) => ({
     paddingTop: 120,
     paddingBottom: 80,
 
-    "@media (max-width: 755px)": {
-      paddingTop: 80,
-      paddingBottom: 60,
+    [theme.fn.smallerThan("sm")]: {
+      paddingTop: 20,
+      paddingBottom: 20,
     },
   },
 

@@ -44,6 +44,9 @@ const useStyles = createStyles((theme) => ({
 
   wrapper: {
     paddingBottom: 50,
+    [theme.fn.smallerThan("sm")]: {
+      paddingBottom: 0,
+    },
   },
 
   subtitle: {

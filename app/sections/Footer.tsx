@@ -16,7 +16,7 @@ import { modals } from "@mantine/modals";
 const useStyles = createStyles((theme) => ({
   inner: {
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "space-evenly",
     alignItems: "center",
     padding: "16px 16px",
     marginTop: 120,
@@ -24,6 +24,14 @@ const useStyles = createStyles((theme) => ({
 
     [theme.fn.smallerThan("sm")]: {
       flexDirection: "column",
+      marginTop: 40,
+    },
+  },
+
+  title: {
+    [theme.fn.smallerThan("sm")]: {
+      marginTop: 10,
+      marginBottom: 20,
     },
   },
 
@@ -116,7 +124,7 @@ export default function Footer() {
         {(styles) => {
           return (
             <div className={classes.inner} style={styles}>
-              <Title order={2}>
+              <Title order={2} className={classes.title}>
                 {displayKeypad ? (
                   <span>
                     <span style={{ color: "#3b5bdb" }}>58</span>
@@ -125,12 +133,12 @@ export default function Footer() {
                 ) : (
                   <span>
                     <span style={{ color: "#3b5bdb" }}>plexi</span>
-                    dev
+                    .dev
                   </span>
                 )}
               </Title>
 
-              <Group>
+              <Group style={{ justifyContent: "space-evenly" }}>
                 {items}
                 <Button
                   style={{ backgroundColor: "#3b5bdb" }}
