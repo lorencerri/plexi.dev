@@ -48,16 +48,12 @@ export default function ProjectLink({
   icon,
   title,
   author,
+  link,
 }: CardGradientProps) {
   return (
     <tr>
       <td>
-        <ThemeIcon
-          size="lg"
-          radius="md"
-          variant="gradient"
-          gradient={{ deg: 120, to: "#C1C2C5", from: "#3B5BDB" }}
-        >
+        <ThemeIcon size="lg" radius="md" variant="light">
           {icon}
         </ThemeIcon>
       </td>
@@ -68,7 +64,9 @@ export default function ProjectLink({
         <Text>{author}</Text>
       </td>
       <td>
-        <Button variant="subtle">Visit</Button>
+        <Anchor href={link} target="_blank">
+          <Button variant="subtle">Visit</Button>
+        </Anchor>
       </td>
     </tr>
   );

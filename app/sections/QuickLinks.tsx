@@ -9,7 +9,14 @@ import {
 
 import { Dots } from "../components/Dots";
 import { useStore } from "app/state";
-import { IconPackage, IconRobot } from "@tabler/icons-react";
+import {
+  IconBrandDiscord,
+  IconBrandGithub,
+  IconBrandTwitter,
+  IconBrandYoutube,
+  IconPackage,
+  IconRobot,
+} from "@tabler/icons-react";
 import ProjectRow from "../components/ProjectRow";
 
 const useStyles = createStyles((theme) => ({
@@ -36,7 +43,6 @@ const useStyles = createStyles((theme) => ({
   },
 
   wrapper: {
-    paddingTop: 80,
     paddingBottom: 50,
   },
 
@@ -80,16 +86,6 @@ export default function QuickLinks() {
       )}
 
       <div className={classes.inner}>
-        <Transition mounted={mounted} duration={2500} transition="fade">
-          {(styles) => {
-            return (
-              <Title order={3} className={classes.subtitle} style={styles}>
-                Quick
-                <span style={{ color: "#3b5bdb" }}> Links</span>
-              </Title>
-            );
-          }}
-        </Transition>
         <Transition
           mounted={mounted}
           duration={2500}
@@ -102,12 +98,36 @@ export default function QuickLinks() {
                 <thead>
                   <tr>
                     <th style={{ width: 16 }}></th>
-                    <th>Project</th>
+                    <th>Project / Resource</th>
                     <th>Author / Team Lead</th>
                     <th style={{ width: 16 }}></th>
                   </tr>
                 </thead>
                 <tbody>
+                  <ProjectRow
+                    icon={<IconBrandDiscord />}
+                    title={"Discord Server"}
+                    author={"Plexi Development"}
+                    link={"https://discord.gg/plexidev"}
+                  />
+                  <ProjectRow
+                    icon={<IconBrandYoutube />}
+                    title={"YouTube Channel"}
+                    author={"Plexi Development"}
+                    link={"https://www.youtube.com/c/TrueXPixels"}
+                  />
+                  <ProjectRow
+                    icon={<IconBrandTwitter />}
+                    title={"Twitter"}
+                    author={"Plexi Development"}
+                    link={"https://twitter.com/plexidev"}
+                  />
+                  <ProjectRow
+                    icon={<IconBrandGithub />}
+                    title={"GitHub"}
+                    author={"Plexi Development"}
+                    link={"https://github.com/plexidev"}
+                  />
                   <ProjectRow
                     icon={<IconPackage />}
                     title={"Quick.db"}
@@ -115,16 +135,16 @@ export default function QuickLinks() {
                     link={"https://github.com/plexidev/quick.db"}
                   />
                   <ProjectRow
-                    icon={<IconRobot />}
-                    title={"Guardian"}
-                    author={"lorencerri"}
-                    link={"https://github.com/lorencerri/discord-guardian"}
-                  />
-                  <ProjectRow
                     icon={<IconPackage />}
                     title={"QuickMongo"}
                     author={"Zelak312"}
                     link={"https://github.com/plexidev/quickmongo"}
+                  />
+                  <ProjectRow
+                    icon={<IconRobot />}
+                    title={"Guardian"}
+                    author={"lorencerri"}
+                    link={"https://github.com/lorencerri/discord-guardian"}
                   />
                 </tbody>
               </Table>

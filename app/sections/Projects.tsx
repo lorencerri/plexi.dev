@@ -93,7 +93,7 @@ export default function Projects({ targetRef }: ProjectsProps) {
                 style={styles}
                 ref={targetRef}
               >
-                Our
+                Major
                 <span style={{ color: "#3b5bdb" }}> Projects</span>
               </Title>
             );
