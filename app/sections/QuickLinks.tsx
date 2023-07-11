@@ -16,6 +16,7 @@ import {
   IconBrandYoutube,
   IconPackage,
   IconRobot,
+  IconTerminal,
 } from "@tabler/icons-react";
 import ProjectRow from "../components/ProjectRow";
 
@@ -144,7 +145,7 @@ export default function QuickLinks() {
                     link={"https://github.com/plexidev/quickmongo"}
                   />
                   <ProjectRow
-                    icon={<IconPackage />}
+                    icon={<IconTerminal />}
                     title={"Nora"}
                     author={"Zelak"}
                     link={"https://github.com/Zelak312/nora_rename"}
