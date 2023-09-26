@@ -124,26 +124,26 @@ const special = [
 const team = [
   {
     name: "lorencerri",
-    title: "Founder / Developer",
+    title: "Founder & Developer",
     avatar: lorencerriAvatar,
     github: "@lorencerri",
-    discord: "lettuce#2113",
+    discord: "@lorencerri",
     display: 1,
   },
   {
     name: "Zorotic",
-    title: "Administrator / Developer",
+    title: "Administrator & Developer",
     avatar: zoroticAvatar,
     github: "@Zorotic",
-    email: "Zorotic#0001",
+    email: "@zorotic",
     display: 2,
   },
   {
     name: "Zelak",
-    title: "Lead Developer & Maintainer",
+    title: "Lead Developer",
     avatar: ZelakAvatar,
     github: "@ZelAk312",
-    discord: "Zelak#1444",
+    discord: "@zelak",
     display: 3,
   },
   {
@@ -151,7 +151,7 @@ const team = [
     title: "Developer",
     avatar: CartarAvatar,
     github: "@realCartar",
-    discord: "Cartar#0001",
+    discord: "@cartar.",
     display: 4,
   },
   {
@@ -159,7 +159,7 @@ const team = [
     title: "Developer",
     avatar: FreezInAvatar,
     github: "@alexy4744",
-    discord: "FreezIn#0086",
+    discord: "@alexy4744",
     display: 5,
   },
   {
@@ -167,7 +167,7 @@ const team = [
     title: "Developer",
     avatar: hasteAvatar,
     github: "@hhaste",
-    discord: "haste#3701",
+    discord: "@hastilion",
     display: 6,
   },
   {
@@ -175,7 +175,7 @@ const team = [
     title: "Developer",
     avatar: ImDarkDiamondAvatar,
     github: "@ImDarkDiamond",
-    discord: "ImDarkDiamond#0001",
+    discord: "@imdarkdiamond",
     display: 7,
   },
   {
@@ -183,7 +183,7 @@ const team = [
     title: "Developer",
     avatar: IttimAvatar,
     github: "@TheIttim",
-    discord: "Ittim#0092",
+    discord: "@ittim",
     display: 8,
   },
   {
@@ -191,7 +191,7 @@ const team = [
     title: "Developer",
     avatar: polarisAvatar,
     github: "@impolqris",
-    discord: "polaris#9153",
+    discord: "@impolaris",
     display: 9,
   },
   {
@@ -199,31 +199,24 @@ const team = [
     title: "Developer",
     avatar: YahikoAvatar,
     github: "@KnowItAllKing",
-    discord: "Yahiko#0659",
+    discord: "@knowitallking",
     display: "Back",
     borderColor: "red",
   },
   {
     name: "Moord",
-    title: "Staff",
+    title: "Support Team",
     avatar: MoordAvatar,
-    discord: "Moord#1910",
+    discord: "@moordymoord",
     display: "0",
-  },
-
-  {
-    name: "rockdog6-6-6",
-    title: "Staff",
-    avatar: rockdog666Avatar,
-    discord: "rockdog6-6-6#6865",
-    display: "Enter",
-    borderColor: "green",
   },
   {
     name: "whomity",
-    title: "Staff",
+    title: "Support Team",
     avatar: whomityAvatar,
-    discord: "whomity#9612",
+    discord: "@tommy.liu",
+    display: "Enter",
+    borderColor: "green",
   },
 ];
 
