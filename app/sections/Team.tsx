@@ -23,7 +23,6 @@ import ImDarkDiamondAvatar from "app/images/avatars/ImDarkDiamond.webp";
 import IttimAvatar from "app/images/avatars/Ittim.webp";
 import MoordAvatar from "app/images/avatars/Moord.webp";
 import polarisAvatar from "app/images/avatars/polaris.webp";
-import rockdog666Avatar from "app/images/avatars/rockdog6-6-6.webp";
 import whomityAvatar from "app/images/avatars/whomity.webp";
 import YahikoAvatar from "app/images/avatars/Yahiko.webp";
 import ZelakAvatar from "app/images/avatars/Zelak.webp";

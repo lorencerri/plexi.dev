@@ -1,11 +1,5 @@
 import { useState, useEffect } from "react";
-import {
-  Title,
-  Container,
-  createStyles,
-  Table,
-  Transition,
-} from "@mantine/core";
+import { Accordion, Container, createStyles, Transition } from "@mantine/core";
 
 import { Dots } from "../components/Dots";
 import { useStore } from "app/state";
@@ -24,6 +18,10 @@ const useStyles = createStyles((theme) => ({
   inner: {
     position: "relative",
     zIndex: 1,
+  },
+
+  linksContainer: {
+    minWidth: "100%",
   },
 
   dots: {
@@ -96,68 +94,70 @@ export default function QuickLinks() {
           transition={"fade"}
           timingFunction={"ease"}
         >
-          {(styles) => {
+          {() => {
             return (
-              <Table className={classes.members} style={styles}>
-                <thead>
-                  <tr>
-                    <th style={{ width: 16 }}></th>
-                    <th>Project / Resource</th>
-                    <th>Author / Team Lead</th>
-                    <th style={{ width: 16 }}></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <ProjectRow
-                    icon={<IconBrandDiscord />}
-                    title={"Discord Server"}
-                    author={"Plexi Development"}
-                    link={"https://discord.gg/plexidev"}
-                  />
-                  <ProjectRow
-                    icon={<IconBrandYoutube />}
-                    title={"YouTube Channel"}
-                    author={"Plexi Development"}
-                    link={"https://www.youtube.com/c/TrueXPixels"}
-                  />
-                  <ProjectRow
-                    icon={<IconBrandTwitter />}
-                    title={"Twitter"}
-                    author={"Plexi Development"}
-                    link={"https://twitter.com/plexidev"}
-                  />
-                  <ProjectRow
-                    icon={<IconBrandGithub />}
-                    title={"GitHub"}
-                    author={"Plexi Development"}
-                    link={"https://github.com/plexidev"}
-                  />
-                  <ProjectRow
-                    icon={<IconPackage />}
-                    title={"Quick.db"}
-                    author={"Zelak"}
-                    link={"https://github.com/plexidev/quick.db"}
-                  />
-                  <ProjectRow
-                    icon={<IconPackage />}
-                    title={"QuickMongo"}
-                    author={"Zelak"}
-                    link={"https://github.com/plexidev/quickmongo"}
-                  />
-                  <ProjectRow
-                    icon={<IconTerminal />}
-                    title={"Nora"}
-                    author={"Zelak"}
-                    link={"https://github.com/Zelak312/nora_rename"}
-                  />
-                  <ProjectRow
-                    icon={<IconRobot />}
-                    title={"Guardian"}
-                    author={"lorencerri"}
-                    link={"https://github.com/lorencerri/discord-guardian"}
-                  />
-                </tbody>
-              </Table>
+              <Accordion
+                maw={400}
+                defaultValue={"Discord Server"}
+                className={classes.linksContainer}
+              >
+                <ProjectRow
+                  icon={<IconBrandDiscord />}
+                  title={"Discord Server"}
+                  description="Join our Discord server to get support, report bugs, and chat with the community."
+                  author={"Plexi Development"}
+                  link={"https://discord.gg/plexidev"}
+                />
+                <ProjectRow
+                  icon={<IconBrandYoutube />}
+                  title={"YouTube Channel"}
+                  description="Our YouTube channel is where we post tutorials, showcases, and more."
+                  author={"Plexi Development"}
+                  link={"https://www.youtube.com/c/TrueXPixels"}
+                />
+                <ProjectRow
+                  icon={<IconBrandTwitter />}
+                  title={"Twitter"}
+                  description="Follow us on Twitter to get updates on our projects and more."
+                  author={"Plexi Development"}
+                  link={"https://twitter.com/plexidev"}
+                />
+                <ProjectRow
+                  icon={<IconBrandGithub />}
+                  title={"GitHub"}
+                  description="Check out our GitHub to see our open-source projects."
+                  author={"Plexi Development"}
+                  link={"https://github.com/plexidev"}
+                />
+                <ProjectRow
+                  icon={<IconPackage />}
+                  title={"Quick.db"}
+                  description="Our primary project, a database wrapper for better-sqlite3."
+                  author={"Zelak"}
+                  link={"https://github.com/plexidev/quick.db"}
+                />
+                <ProjectRow
+                  icon={<IconPackage />}
+                  title={"QuickMongo"}
+                  description="A MongoDB wrapper for quick.db."
+                  author={"Zelak"}
+                  link={"https://github.com/plexidev/quickmongo"}
+                />
+                <ProjectRow
+                  icon={<IconTerminal />}
+                  title={"Nora"}
+                  description="A Discord bot written in TypeScript."
+                  author={"Zelak"}
+                  link={"https://github.com/Zelak312/nora_rename"}
+                />
+                <ProjectRow
+                  icon={<IconRobot />}
+                  title={"Guardian"}
+                  description="A Discord bot that protects your server from malicious users."
+                  author={"lorencerri"}
+                  link={"https://github.com/lorencerri/discord-guardian"}
+                />
+              </Accordion>
             );
           }}
         </Transition>
