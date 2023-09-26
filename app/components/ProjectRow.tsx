@@ -1,10 +1,6 @@
 import {
   createStyles,
-  Paper,
   Text,
-  ThemeIcon,
-  Transition,
-  Grid,
   Button,
   Anchor,
   Accordion,
@@ -30,6 +26,14 @@ const useStyles = createStyles((theme, _state) => ({
       zIndex: 1,
       border: "none",
       boxShadow: theme.shadows.md,
+    },
+  },
+
+  badge: {
+    textTransform: "none",
+    fontWeight: 500,
+    ".mantine-Badge-inner": {
+      marginLeft: 1,
     },
   },
 
@@ -60,6 +64,7 @@ const useStyles = createStyles((theme, _state) => ({
 interface CardGradientProps {
   title: string;
   author: string;
+  type: string;
   description?: string;
   icon: ReactNode;
   link?: string;
@@ -70,6 +75,7 @@ export default function ProjectLink({
   title,
   author,
   description,
+  type,
   link,
 }: CardGradientProps) {
   const styles = useStyles();
@@ -77,7 +83,19 @@ export default function ProjectLink({
   return (
     <Accordion.Item key={title} value={title} className={styles.classes.item}>
       <Accordion.Control icon={icon} className={styles.classes.control}>
-        <Text weight={500}>{title}</Text>
+        <Text weight={500}>{title}</Text>{" "}
+        <Badge
+          size="sm"
+          color="red"
+          variant="dot"
+          className={styles.classes.badge}
+          style={{ marginRight: 3 }}
+        >
+          {type}
+        </Badge>
+        <Badge size="sm" variant="dot" className={styles.classes.badge}>
+          {author}
+        </Badge>
       </Accordion.Control>
       <Accordion.Panel>
         <Group className={styles.classes.group}>
