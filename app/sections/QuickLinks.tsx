@@ -136,7 +136,7 @@ export default function QuickLinks() {
                 <ProjectRow
                   icon={<IconPackage />}
                   title={"Quick.db"}
-                  type="Open-Source Project"
+                  type="Project"
                   description="Our primary project, a database wrapper for better-sqlite3."
                   author={"Zelak"}
                   link={"https://github.com/plexidev/quick.db"}
@@ -160,7 +160,7 @@ export default function QuickLinks() {
                 <ProjectRow
                   icon={<IconRobot />}
                   title={"Guardian"}
-                  type="Open-Source Project"
+                  type="Project"
                   description="A Discord bot that protects your server from malicious users."
                   author={"lorencerri"}
                   link={"https://github.com/lorencerri/discord-guardian"}
