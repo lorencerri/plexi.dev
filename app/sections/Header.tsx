@@ -22,8 +22,6 @@ const useStyles = createStyles((theme) => ({
     left: 0,
     right: 0,
     zIndex: 2,
-    borderTopRightRadius: 0,
-    borderTopLeftRadius: 0,
     borderTopWidth: 0,
     overflow: "hidden",
 
