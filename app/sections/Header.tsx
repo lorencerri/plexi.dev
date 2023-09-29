@@ -21,7 +21,7 @@ const useStyles = createStyles((theme) => ({
     top: 60,
     left: 0,
     right: 0,
-    zIndex: 0,
+    zIndex: 2,
     borderTopRightRadius: 0,
     borderTopLeftRadius: 0,
     borderTopWidth: 0,
@@ -29,6 +29,9 @@ const useStyles = createStyles((theme) => ({
 
     [theme.fn.largerThan("sm")]: {
       display: "none",
+    },
+    [theme.fn.smallerThan("sm")]: {
+      margin: "0px 10px",
     },
   },
 
