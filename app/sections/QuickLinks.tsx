@@ -11,6 +11,7 @@ import {
   IconPackage,
   IconRobot,
   IconTerminal,
+  IconBuildingBank,
 } from "@tabler/icons-react";
 import ProjectRow from "../components/ProjectRow";
 
@@ -110,6 +111,22 @@ export default function QuickLinks() {
                   link={"https://discord.gg/plexidev"}
                 />
                 <ProjectRow
+                  icon={<IconPackage />}
+                  title={"Quick.db"}
+                  type="Project"
+                  description="Our primary project, a database wrapper for better-sqlite3."
+                  author={"Zelak"}
+                  link={"https://github.com/plexidev/quick.db"}
+                />
+                <ProjectRow
+                  icon={<IconBuildingBank />}
+                  title={"Open Collective Page"}
+                  description="Our Open Collective page shows our recurring expenses and how to contribute."
+                  type="Internal"
+                  author={"Plexi Development"}
+                  link={"https://opencollective.com/plexidev"}
+                />
+                <ProjectRow
                   icon={<IconBrandYoutube />}
                   title={"YouTube Channel"}
                   type="Resource"
@@ -132,14 +149,6 @@ export default function QuickLinks() {
                   description="Check out our GitHub to see our open-source projects."
                   author={"Plexi Development"}
                   link={"https://github.com/plexidev"}
-                />
-                <ProjectRow
-                  icon={<IconPackage />}
-                  title={"Quick.db"}
-                  type="Project"
-                  description="Our primary project, a database wrapper for better-sqlite3."
-                  author={"Zelak"}
-                  link={"https://github.com/plexidev/quick.db"}
                 />
                 <ProjectRow
                   icon={<IconPackage />}
