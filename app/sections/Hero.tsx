@@ -137,7 +137,7 @@ export default function Hero({ scrollIntoView }: HeroProps) {
 
               <Container p={0} size={600}>
                 <Text size="lg" color="dimmed" className={classes.description}>
-                  We're a community of developers and creators centered around
+                  We're a community of developers and students centered around
                   creating user-friendly applications and developer resources.
                 </Text>
               </Container>
