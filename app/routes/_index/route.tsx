@@ -4,7 +4,7 @@ import Logo from "./Logo";
 import Hero from "~/components/Hero";
 
 export const meta: MetaFunction = () => {
-  return [{ title: "config-dnd" }];
+  return [{ title: "Plexi Development" }];
 };
 
 export default function Index() {
