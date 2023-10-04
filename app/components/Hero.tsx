@@ -42,7 +42,14 @@ export default function CustomHero() {
           Join our community
         </Button>
 
-        <Button className={classes.button} size="lg">
+        <Button
+          component="a"
+          href="https://github.com/plexidev"
+          target="_blank"
+          rel="noopener noreferrer"
+          size="lg"
+          className={classes.button}
+        >
           Projects
         </Button>
       </div>
