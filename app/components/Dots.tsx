@@ -1,3 +1,5 @@
+import classes from "./Dots.module.css";
+
 interface DotsProps {
   size?: number;
   radius?: number;
@@ -25,6 +27,7 @@ export function Dots({
       viewBox="0 0 185 185"
       width={size}
       height={size}
+      className={classes.dots}
       style={{ top, bottom, left, right }}
       {...others}
     >

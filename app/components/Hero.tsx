@@ -12,13 +12,13 @@ export default function CustomHero() {
 
   return (
     <Container className={classes.container} size={1400}>
-      <Dots left={0} top={0} className={classes.dots} />
-      <Dots left={60} top={0} className={classes.dots} />
-      <Dots left={0} top={140} className={classes.dots} />
-      <Dots right={0} top={60} className={classes.dots} />
+      <Dots left={0} top={0} />
+      <Dots left={60} top={0} />
+      <Dots left={0} top={140} />
+      <Dots right={0} top={60} />
 
       <Title className={classes.title}>
-        Welcome To <span className={classes.highlight}>Plexi Development</span>
+        Welcome To <span className="highlight">Plexi Development</span>
       </Title>
       <Container p={0} size={600}>
         <Text size="lg" c="dimmed" className={classes.description}>
