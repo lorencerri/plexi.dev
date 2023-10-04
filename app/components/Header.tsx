@@ -34,7 +34,7 @@ export default function CustomHeader({ logo, links }: CustomHeaderProps) {
     ));
 
   return (
-    <AppShell header={{ height: 60 }}>
+    <AppShell header={{ height: 60 }} className={classes.wrapper}>
       <AppShell.Header className={classes.header}>
         <Container className={classes.container}>
           <Title order={2}>{logo}</Title>

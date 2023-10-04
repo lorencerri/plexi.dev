@@ -1,6 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import Header from "~/components/Header";
 import Logo from "./Logo";
+import Hero from "~/components/Hero";
 
 export const meta: MetaFunction = () => {
   return [{ title: "config-dnd" }];
@@ -18,6 +19,7 @@ export default function Index() {
           { url: "https://discord.gg/plexidev", label: "Discord" },
         ]}
       />
+      <Hero />
     </div>
   );
 }

@@ -1,3 +1,7 @@
+.wrapper {
+  height: 120px;
+}
+
 .header {
   border-bottom: none;
   margin-bottom: 120px;
