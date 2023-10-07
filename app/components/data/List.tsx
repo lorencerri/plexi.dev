@@ -11,18 +11,12 @@ import {
   IconBuildingBank,
 } from "@tabler/icons-react";
 
-import { Dots } from "~/components/visual/Dots";
 import { Accordion, Container } from "@mantine/core";
 import ListItem from "./ListItem";
 
 export default function List() {
   return (
     <Container className={classes.container}>
-      <Dots left={100} top={1600} />
-      <Dots left={160} top={1600} />
-      <Dots left={100} top={1540} />
-      <Dots right={100} top={1660} />
-
       <Accordion
         maw={400}
         defaultValue="Discord Server"

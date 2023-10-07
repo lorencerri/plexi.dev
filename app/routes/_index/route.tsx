@@ -9,6 +9,7 @@ import {
   CardGrid,
   UserGrid,
   Footer,
+  Dots,
 } from "~/components";
 
 export const meta: MetaFunction = () => {
@@ -25,6 +26,19 @@ const links = [
 export default function Index() {
   return (
     <div>
+      <Dots left={0} top={0} />
+      <Dots left={60} top={0} />
+      <Dots left={0} top={140} />
+      <Dots right={0} top={60} />
+      <Dots left={100} top={1600} />
+      <Dots left={160} top={1600} />
+      <Dots left={100} top={1540} />
+      <Dots right={100} top={1660} />
+      <Dots left={100} top={2600} />
+      <Dots left={160} top={2600} />
+      <Dots left={100} top={2540} />
+      <Dots right={100} top={2660} />
+
       <Header logo={<Logo />} links={links} />
       <Hero />
       <List />

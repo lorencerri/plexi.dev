@@ -15,7 +15,7 @@ import whomityAvatar from "app/assets/avatars/whomity.webp";
 import YahikoAvatar from "app/assets/avatars/Yahiko.webp";
 import ZelakAvatar from "app/assets/avatars/Zelak.webp";
 import UserIcon from "./UserIcon";
-import { Dots } from "~/components/visual/Dots";
+import Dots from "~/components/visual/Dots";
 
 const team = [
   {

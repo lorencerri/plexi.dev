@@ -10,7 +10,7 @@ interface DotsProps {
   className?: string;
 }
 
-export function Dots({
+export default function Dots({
   size = 185,
   radius = 2.5,
   left,

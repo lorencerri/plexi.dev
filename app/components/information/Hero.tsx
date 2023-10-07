@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import classes from "./Hero.module.css";
 import { Container, Title, Text, Button } from "@mantine/core";
-import { Dots } from "~/components/visual/Dots";
 
 export default function CustomHero() {
   const [mounted, setMounted] = useState(false);
@@ -12,11 +11,6 @@ export default function CustomHero() {
 
   return (
     <Container className={classes.container} size={1400}>
-      <Dots left={0} top={0} />
-      <Dots left={60} top={0} />
-      <Dots left={0} top={140} />
-      <Dots right={0} top={60} />
-
       <Title className={classes.title}>
         Welcome To <span className="highlight">Plexi Development</span>
       </Title>
