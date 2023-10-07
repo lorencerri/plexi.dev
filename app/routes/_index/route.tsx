@@ -3,6 +3,7 @@ import Header from "~/components/Header";
 import Logo from "./Logo";
 import Hero from "~/components/Hero";
 import List from "~/components/List";
+import SectionHeader from "~/components/SectionHeader";
 
 export const meta: MetaFunction = () => {
   return [{ title: "Plexi Development" }];
@@ -22,6 +23,7 @@ export default function Index() {
       />
       <Hero />
       <List />
+      <SectionHeader title="Meet The Team" highlight="Team" />
     </div>
   );
 }
