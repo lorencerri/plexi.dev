@@ -26,6 +26,7 @@ export default function Index() {
       <List />
       <SectionHeader title="Meet The Team" highlight="Team" />
       <UserGrid />
+      <SectionHeader title="Major Projects" highlight="Projects" />
     </div>
   );
 }
