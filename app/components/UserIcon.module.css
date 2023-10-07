@@ -1,0 +1,30 @@
+.container {
+  flex-wrap: nowrap;
+}
+
+.avatar {
+  transition: transform 150ms ease, box-shadow 100ms ease;
+
+  &:hover {
+    box-shadow: mantime-var(--mantine-shadow-md);
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.icon {
+  color: var(--mantine-color-dark-3);
+}
+
+.link {
+  text-underline-offset: var(--mantine-color-indigo-8);
+}
