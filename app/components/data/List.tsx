@@ -11,7 +11,7 @@ import {
   IconBuildingBank,
 } from "@tabler/icons-react";
 
-import { Dots } from "./Dots";
+import { Dots } from "~/components/visual/Dots";
 import { Accordion, Container } from "@mantine/core";
 import ListItem from "./ListItem";
 

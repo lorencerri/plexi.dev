@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import classes from "./Hero.module.css";
 import { Container, Title, Text, Button } from "@mantine/core";
-import { Dots } from "./Dots";
+import { Dots } from "~/components/visual/Dots";
 
 export default function CustomHero() {
   const [mounted, setMounted] = useState(false);

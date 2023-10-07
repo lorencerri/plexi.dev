@@ -2,7 +2,7 @@ import Card from "./Card";
 
 import { SimpleGrid, Container } from "@mantine/core";
 import { IconClock, IconPackage, IconRobot } from "@tabler/icons-react";
-import { Dots } from "./Dots";
+import { Dots } from "~/components/visual/Dots";
 
 export default function CardGrid() {
   return (
