@@ -1,0 +1,47 @@
+.item {
+  border-radius: var(--mantine-radius-sm);
+  background-color: var(--mantine-color-dark-7);
+  border: none;
+  position: relative;
+  z-index: 0;
+  transition: transform 150ms ease;
+  min-width: 100%;
+
+  &[data-active] {
+    transform: scale(1.03);
+    background-color: var(--mantine-color-dark-6);
+    z-index: 1;
+    border: none;
+    box-shadow: var(--mantine-shadow-md);
+  }
+}
+
+.control {
+  padding-bottom: 10px;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.title {
+  font-weight: 500;
+}
+
+.badge {
+  text-transform: none;
+  font-weight: 500;
+
+  &:not(:last-child) {
+    margin-right: 3px;
+  }
+}
+
+.group {
+  justify-content: space-between;
+}
+
+.description {
+  min-width: 80%;
+  margin-left: 10px;
+}

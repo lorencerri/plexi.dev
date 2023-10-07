@@ -1,0 +1,12 @@
+.container {
+  position: relative;
+  padding-bottom: 50px;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    padding-bottom: 0px;
+  }
+}
+
+.list {
+  min-width: 100%;
+}

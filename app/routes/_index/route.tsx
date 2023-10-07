@@ -2,6 +2,7 @@ import type { MetaFunction } from "@remix-run/node";
 import Header from "~/components/Header";
 import Logo from "./Logo";
 import Hero from "~/components/Hero";
+import List from "~/components/List";
 
 export const meta: MetaFunction = () => {
   return [{ title: "Plexi Development" }];
@@ -20,6 +21,7 @@ export default function Index() {
         ]}
       />
       <Hero />
+      <List />
     </div>
   );
 }
