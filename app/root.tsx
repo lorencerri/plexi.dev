@@ -14,6 +14,11 @@ import {
 import { MantineProvider } from "@mantine/core";
 
 export const links: LinksFunction = () => [
+  {
+    rel: "icon",
+    href: "/favicon.ico",
+    type: "image/ico",
+  },
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 
