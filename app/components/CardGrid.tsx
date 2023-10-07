@@ -2,10 +2,16 @@ import Card from "./Card";
 
 import { SimpleGrid, Container } from "@mantine/core";
 import { IconClock, IconPackage, IconRobot } from "@tabler/icons-react";
+import { Dots } from "./Dots";
 
 export default function CardGrid() {
   return (
     <Container size={1050}>
+      <Dots left={100} top={1600} />
+      <Dots left={160} top={1600} />
+      <Dots left={100} top={1540} />
+      <Dots right={100} top={1660} />
+
       <SimpleGrid
         spacing={{ base: 40, md: 50 }}
         cols={{ base: 1, md: 2 }}
