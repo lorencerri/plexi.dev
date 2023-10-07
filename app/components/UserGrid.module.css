@@ -1,13 +1,3 @@
-.container {
-  padding-top: 80px;
-  padding-bottom: 50px;
-
-  @media (min-width: $mantine-breakpoint-sm) {
-    padding-top: 30px;
-    padding-bottom: 10px;
-  }
-}
-
 .grid {
   position: relative;
   z-index: 1;

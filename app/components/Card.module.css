@@ -1,0 +1,32 @@
+.card {
+  position: relative;
+  cursor: default;
+  overflow: hidden;
+  transition: transform 150ms ease, box-shadow 100ms ease;
+  padding: var(--mantine-spacing-xl);
+
+  &:hover {
+    box-shadow: var(--mantine-shadow-md);
+    transform: scale(1.02);
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 6px;
+    background: linear-gradient(0deg, #c1c2c5, #3b5bdb);
+  }
+}
+
+.title {
+  font-weight: 500;
+}
+
+.button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

@@ -5,6 +5,7 @@ import Hero from "~/components/Hero";
 import List from "~/components/List";
 import SectionHeader from "~/components/SectionHeader";
 import UserGrid from "~/components/UserGrid";
+import CardGrid from "~/components/CardGrid";
 
 export const meta: MetaFunction = () => {
   return [{ title: "Plexi Development" }];
@@ -27,6 +28,7 @@ export default function Index() {
       <SectionHeader title="Meet The Team" highlight="Team" />
       <UserGrid />
       <SectionHeader title="Major Projects" highlight="Projects" />
+      <CardGrid />
     </div>
   );
 }
