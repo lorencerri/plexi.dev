@@ -1,5 +1,6 @@
 .card {
   position: relative;
+  z-index: 1;
   cursor: default;
   overflow: hidden;
   transition: transform 150ms ease, box-shadow 100ms ease;
