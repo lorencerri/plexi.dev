@@ -1,12 +1,15 @@
 import type { MetaFunction } from "@remix-run/node";
-import Header from "~/components/navigation/Header";
-import Logo from "./Logo";
-import Hero from "~/components/information/Hero";
-import List from "~/components/data/List";
-import SectionHeader from "~/components/text/SectionHeader";
-import UserGrid from "~/components/data/UserGrid";
-import CardGrid from "~/components/data/CardGrid";
-import Footer from "~/components/navigation/Footer";
+
+import {
+  Logo,
+  Header,
+  Hero,
+  List,
+  SectionHeader,
+  CardGrid,
+  UserGrid,
+  Footer,
+} from "~/components";
 
 export const meta: MetaFunction = () => {
   return [{ title: "Plexi Development" }];
@@ -29,7 +32,7 @@ export default function Index() {
       <UserGrid />
       <SectionHeader title="Major Projects" highlight="Projects" />
       <CardGrid />
-      <Footer links={links} />
+      <Footer logo={<Logo />} links={links} />
     </div>
   );
 }

@@ -1,16 +1,17 @@
-import Logo from "~/routes/_index/Logo";
 import classes from "./Footer.module.css";
 import { Anchor, Group, Title } from "@mantine/core";
+import type { ReactNode } from "react";
 
 interface FooterProps {
+  logo: ReactNode;
   links?: { url: string; label: string }[];
 }
 
-export default function Footer({ links }: FooterProps) {
+export default function Footer({ logo, links }: FooterProps) {
   return (
     <Group className={classes.footer}>
       <Title order={2} className={classes.title}>
-        <Logo />
+        {logo}
       </Title>
       {links && (
         <Group className={classes.links}>
