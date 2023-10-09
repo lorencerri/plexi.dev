@@ -1,17 +1,15 @@
 import type { MetaFunction } from "@remix-run/node";
 
-import {
-  Logo,
-  Header,
-  Hero,
-  List,
-  CardGrid,
-  UserGrid,
-  Footer,
-} from "~/components";
-import { AdaptiveLayout } from "~/components/adaptive-ui/Layout/AdaptiveLayout";
+import Logo from "~/components/Logo";
+import Hero from "~/components/Hero";
+import List from "~/components/List";
+import CardGrid from "~/components/CardGrid";
+import UserGrid from "~/components/UserGrid";
 
+import { AdaptiveLayout } from "~/components/adaptive-ui/Layout/AdaptiveLayout";
 import { SectionHeader } from "~/components/adaptive-ui/Text/SectionHeader";
+import { Header } from "~/components/adaptive-ui/Layout/Header";
+import { Footer } from "~/components/adaptive-ui/Layout/Footer";
 
 export const meta: MetaFunction = () => {
   return [{ title: "Plexi Development" }];
