@@ -5,12 +5,13 @@ import {
   Header,
   Hero,
   List,
-  SectionHeader,
   CardGrid,
   UserGrid,
   Footer,
   Dots,
 } from "~/components";
+
+import { SectionHeader } from "~/components/adaptive-ui/Text/SectionHeader";
 
 export const meta: MetaFunction = () => {
   return [{ title: "Plexi Development" }];
@@ -42,9 +43,9 @@ export default function Index() {
       <Header logo={<Logo />} links={links} />
       <Hero />
       <List />
-      <SectionHeader title="Meet The Team" highlight="Team" />
+      <SectionHeader text="Meet The Team" highlight="Team" />
       <UserGrid />
-      <SectionHeader title="Major Projects" highlight="Projects" />
+      <SectionHeader text="Major Projects" highlight="Projects" />
       <CardGrid />
       <Footer logo={<Logo />} links={links} />
     </div>
