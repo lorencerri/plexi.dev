@@ -8,8 +8,9 @@ import {
   CardGrid,
   UserGrid,
   Footer,
-  Dots,
 } from "~/components";
+import { AdaptiveLayout } from "~/components/adaptive-ui/Layout/AdaptiveLayout";
+import { Dots } from "~/components/adaptive-ui/Decorative/Dots";
 
 import { SectionHeader } from "~/components/adaptive-ui/Text/SectionHeader";
 
@@ -26,7 +27,7 @@ const links = [
 
 export default function Index() {
   return (
-    <div>
+    <AdaptiveLayout>
       <Dots left={0} top={0} />
       <Dots left={60} top={0} />
       <Dots left={0} top={140} />
@@ -48,6 +49,6 @@ export default function Index() {
       <SectionHeader text="Major Projects" highlight="Projects" />
       <CardGrid />
       <Footer logo={<Logo />} links={links} />
-    </div>
+    </AdaptiveLayout>
   );
 }
