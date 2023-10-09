@@ -10,7 +10,6 @@ import {
   Footer,
 } from "~/components";
 import { AdaptiveLayout } from "~/components/adaptive-ui/Layout/AdaptiveLayout";
-import { Dots } from "~/components/adaptive-ui/Decorative/Dots";
 
 import { SectionHeader } from "~/components/adaptive-ui/Text/SectionHeader";
 
@@ -27,7 +26,7 @@ const links = [
 
 export default function Index() {
   return (
-    <AdaptiveLayout dots={true}>
+    <AdaptiveLayout dots={{ seed: "gggg" }}>
       <Header logo={<Logo />} links={links} />
       <Hero />
       <List />
