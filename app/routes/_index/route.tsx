@@ -7,7 +7,7 @@ import CardGrid from "~/components/CardGrid";
 import UserGrid from "~/components/UserGrid";
 
 import { AdaptiveLayout } from "~/components/adaptive-ui/Layout/AdaptiveLayout";
-import { SectionHeader } from "~/components/adaptive-ui/Text/SectionHeader";
+import { Heading } from "~/components/adaptive-ui/Text/Heading";
 import { Header } from "~/components/adaptive-ui/Layout/Header";
 import { Footer } from "~/components/adaptive-ui/Layout/Footer";
 
@@ -28,9 +28,9 @@ export default function Index() {
       <Header logo={<Logo />} links={links} />
       <Hero />
       <List />
-      <SectionHeader text="Meet The Team" highlight="Team" />
+      <Heading text="Meet The Team" highlight="Team" />
       <UserGrid />
-      <SectionHeader text="Major Projects" highlight="Projects" />
+      <Heading text="Major Projects" highlight="Projects" />
       <CardGrid />
       <Footer logo={<Logo />} links={links} />
     </AdaptiveLayout>
