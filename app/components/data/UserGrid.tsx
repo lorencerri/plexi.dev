@@ -15,7 +15,6 @@ import whomityAvatar from "app/assets/avatars/whomity.webp";
 import YahikoAvatar from "app/assets/avatars/Yahiko.webp";
 import ZelakAvatar from "app/assets/avatars/Zelak.webp";
 import UserIcon from "./UserIcon";
-import Dots from "~/components/visual/Dots";
 
 const team = [
   {
@@ -119,11 +118,6 @@ const team = [
 export default function AvatarGrid() {
   return (
     <Container>
-      <Dots left={100} top={800} />
-      <Dots left={160} top={800} />
-      <Dots left={100} top={940} />
-      <Dots right={100} top={860} />
-
       <SimpleGrid
         cols={{ base: 1, sm: 2, lg: 3 }}
         spacing={{ base: 40, lg: 50 }}
