@@ -1,6 +1,3 @@
-[submodule "adaptive-ui"]
-	path = adaptive-ui
-	url = https://github.com/lorencerri/adaptive-ui
 [submodule "app/components/adaptive-ui"]
 	path = app/components/adaptive-ui
 	url = https://github.com/lorencerri/adaptive-ui
