@@ -27,24 +27,7 @@ const links = [
 
 export default function Index() {
   return (
-    <AdaptiveLayout>
-      <Dots left={0} top={0} />
-      <Dots left={60} top={0} />
-      <Dots left={0} top={140} />
-      <Dots right={0} top={60} />
-      <Dots left={100} top={800} />
-      <Dots left={160} top={800} />
-      <Dots left={100} top={940} />
-      <Dots right={100} top={860} />
-      <Dots left={100} top={1600} />
-      <Dots left={160} top={1600} />
-      <Dots left={100} top={1540} />
-      <Dots right={100} top={1660} />
-      <Dots left={100} top={2600} />
-      <Dots left={160} top={2600} />
-      <Dots left={100} top={2540} />
-      <Dots right={100} top={2660} />
-
+    <AdaptiveLayout dots={true}>
       <Header logo={<Logo />} links={links} />
       <Hero />
       <List />
