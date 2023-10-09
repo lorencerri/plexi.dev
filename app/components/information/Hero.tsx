@@ -1,14 +1,7 @@
-import { useEffect, useState } from "react";
 import classes from "./Hero.module.css";
 import { Container, Title, Text, Button } from "@mantine/core";
 
 export default function CustomHero() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, [mounted]);
-
   return (
     <Container className={classes.container} size={1400}>
       <Title className={classes.title}>

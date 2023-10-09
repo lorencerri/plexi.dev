@@ -1,3 +1,4 @@
+import classes from "./CardGrid.module.css";
 import Card from "./Card";
 
 import { SimpleGrid, Container } from "@mantine/core";
@@ -10,6 +11,7 @@ export default function CardGrid() {
         spacing={{ base: 40, md: 50 }}
         cols={{ base: 1, md: 2 }}
         mt={40}
+        className={classes.grid}
       >
         <Card
           title="Quick.db"
