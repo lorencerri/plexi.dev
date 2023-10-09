@@ -9,6 +9,8 @@ import {
   IconRobot,
   IconTerminal,
   IconBuildingBank,
+  IconBrowser,
+  IconPackages,
 } from "@tabler/icons-react";
 
 import { Accordion, Container } from "@mantine/core";
@@ -93,6 +95,22 @@ export default function List() {
           description="A Discord bot that protects your server from malicious users."
           author={"lorencerri"}
           link={"https://github.com/lorencerri/discord-guardian"}
+        />
+        <ListItem
+          icon={<IconBrowser />}
+          title={"plexi.dev"}
+          type="Website"
+          description="This website, built with Mantine and Remix."
+          author={"lorencerri"}
+          link={"https://github.com/lorencerri/plexi.dev"}
+        />
+        <ListItem
+          icon={<IconPackages />}
+          title={"adaptive-ui"}
+          type="Project"
+          description="A highly opinionated wrapper for Mantine to quickly scaffold data-driven web prototypes."
+          author={"lorencerri"}
+          link={"https://github.com/lorencerri/adaptive-ui"}
         />
       </Accordion>
     </Container>
